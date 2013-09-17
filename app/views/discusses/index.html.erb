@@ -1,0 +1,31 @@
+<h1>Listing discusses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Topic</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @discusses.each do |discuss| %>
+      <tr>
+        <td><%= discuss.topic_id %></td>
+        <td><%= discuss.title %></td>
+        <td><%= discuss.description %></td>
+        <td><%= link_to 'Show', discuss %></td>
+        <td><%= link_to 'Edit', edit_discuss_path(discuss) %></td>
+        <td><%= link_to 'Destroy', discuss, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Discuss', new_discuss_path %>

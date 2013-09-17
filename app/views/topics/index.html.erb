@@ -1,0 +1,27 @@
+<h1>Listing topics</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Subject</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @topics.each do |topic| %>
+      <tr>
+        <td><%= topic.title %></td>
+        <td><%= topic.description %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Topic', new_subject_topic_path(params[:subject_id]) %>

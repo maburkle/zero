@@ -8922,3 +8922,3384 @@ ActionView::Template::Error (undefined method `subjects_path' for #<#<Class:0x00
   Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
   Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
   Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-17 13:50:19 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ForumsController#index as HTML
+  [1m[35mForum Load (0.1ms)[0m  SELECT "forums".* FROM "forums"
+  Rendered forums/index.html.erb within layouts/application (21.0ms)
+Completed 200 OK in 138ms (Views: 110.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 13:50:20 -0400
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2013-09-17 13:50:20 -0400
+
+
+Started GET "/assets/forum_list.css?body=1" for 127.0.0.1 at 2013-09-17 13:50:20 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-17 13:50:20 -0400
+
+
+Started GET "/assets/subjects.css?body=1" for 127.0.0.1 at 2013-09-17 13:50:20 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 13:50:20 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-17 13:50:20 -0400
+Processing by ForumsController#index as HTML
+  [1m[36mForum Load (0.2ms)[0m  [1mSELECT "forums".* FROM "forums"[0m
+  Rendered forums/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 13:50:20 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 13:50:20 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 13:50:20 -0400
+
+
+Started GET "/assets/forum_list.css?body=1" for 127.0.0.1 at 2013-09-17 13:50:20 -0400
+
+
+Started GET "/assets/subjects.css?body=1" for 127.0.0.1 at 2013-09-17 13:50:20 -0400
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2013-09-17 13:50:20 -0400
+
+
+Started GET "/assets/forum_list.js?body=1" for 127.0.0.1 at 2013-09-17 13:50:20 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-17 13:50:20 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 13:50:20 -0400
+
+
+Started GET "/assets/forums.js?body=1" for 127.0.0.1 at 2013-09-17 13:50:20 -0400
+
+
+Started GET "/assets/subjects.js?body=1" for 127.0.0.1 at 2013-09-17 13:50:20 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 13:50:20 -0400
+
+
+Started GET "/forums/4/subjects" for 127.0.0.1 at 2013-09-17 13:51:47 -0400
+Processing by SubjectsController#index as HTML
+  Parameters: {"forum_id"=>"4"}
+  [1m[35mForum Load (0.3ms)[0m  SELECT "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mSubject Load (2.7ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."forum_id" = ?[0m  [["forum_id", 4]]
+  Rendered subjects/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 34ms (Views: 9.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/forums/4/subjects/1" for 127.0.0.1 at 2013-09-17 13:55:53 -0400
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+ActiveRecord::PendingMigrationError (Migrations are pending; run 'rake db:migrate RAILS_ENV=development' to resolve this issue.):
+  activerecord (4.0.0) lib/active_record/migration.rb:379:in `check_pending!'
+  activerecord (4.0.0) lib/active_record/migration.rb:366:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__429218338681486748__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.9ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateTopics (20130917175248)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "topics" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "subject_id" integer, "title" varchar(255), "description" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130917175248"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/forums/4/subjects/1" for 127.0.0.1 at 2013-09-17 13:56:04 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SubjectsController#show as HTML
+  Parameters: {"forum_id"=>"4", "id"=>"1"}
+  [1m[35mForum Load (0.4ms)[0m  SELECT "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mSubject Load (0.3ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."forum_id" = ? AND "subjects"."id" = ? LIMIT 1[0m  [["forum_id", 4], ["id", "1"]]
+Completed 404 Not Found in 35ms
+
+ActiveRecord::RecordNotFound (Couldn't find Subject with id=1 [WHERE "subjects"."forum_id" = ?]):
+  app/controllers/subjects_controller.rb:68:in `set_subject'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (40.5ms)
+
+
+Started GET "/forums/1/subjects" for 127.0.0.1 at 2013-09-17 13:56:17 -0400
+Processing by SubjectsController#index as HTML
+  Parameters: {"forum_id"=>"1"}
+  [1m[35mForum Load (0.2ms)[0m  SELECT "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mSubject Load (0.3ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."forum_id" = ?[0m  [["forum_id", 1]]
+  Rendered subjects/index.html.erb within layouts/application (28.7ms)
+Completed 200 OK in 247ms (Views: 242.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2013-09-17 13:56:18 -0400
+
+
+Started GET "/assets/forum_list.css?body=1" for 127.0.0.1 at 2013-09-17 13:56:18 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 13:56:18 -0400
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-09-17 13:56:18 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 13:56:18 -0400
+
+
+Started GET "/forums/1/subjects" for 127.0.0.1 at 2013-09-17 13:56:18 -0400
+Processing by SubjectsController#index as HTML
+  Parameters: {"forum_id"=>"1"}
+  [1m[35mForum Load (0.4ms)[0m  SELECT "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mSubject Load (0.2ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."forum_id" = ?[0m  [["forum_id", 1]]
+  Rendered subjects/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 23ms (Views: 17.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-17 13:56:18 -0400
+
+
+Started GET "/assets/subjects.js?body=1" for 127.0.0.1 at 2013-09-17 13:56:18 -0400
+
+
+Started GET "/assets/forum_list.js?body=1" for 127.0.0.1 at 2013-09-17 13:56:18 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 13:56:18 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 13:56:18 -0400
+
+
+Started GET "/assets/subjects.css?body=1" for 127.0.0.1 at 2013-09-17 13:56:18 -0400
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-09-17 13:56:18 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-17 13:56:18 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 13:56:18 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 13:56:18 -0400
+
+
+Started GET "/assets/subjects.css?body=1" for 127.0.0.1 at 2013-09-17 13:56:18 -0400
+
+
+Started GET "/assets/forum_list.css?body=1" for 127.0.0.1 at 2013-09-17 13:56:18 -0400
+
+
+Started GET "/assets/forums.js?body=1" for 127.0.0.1 at 2013-09-17 13:56:18 -0400
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2013-09-17 13:56:18 -0400
+
+
+Started GET "/assets/forums.js?body=1" for 127.0.0.1 at 2013-09-17 13:56:18 -0400
+
+
+Started GET "/assets/forum_list.js?body=1" for 127.0.0.1 at 2013-09-17 13:56:18 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 13:56:18 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 13:56:18 -0400
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-09-17 13:56:18 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 13:56:18 -0400
+
+
+Started GET "/assets/subjects.js?body=1" for 127.0.0.1 at 2013-09-17 13:56:18 -0400
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-09-17 13:56:18 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 13:56:18 -0400
+
+
+Started GET "/forums/1/subjects/1" for 127.0.0.1 at 2013-09-17 13:56:20 -0400
+Processing by SubjectsController#show as HTML
+  Parameters: {"forum_id"=>"1", "id"=>"1"}
+  [1m[35mForum Load (0.2ms)[0m  SELECT "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mSubject Load (0.2ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."forum_id" = ? AND "subjects"."id" = ? LIMIT 1[0m  [["forum_id", 1], ["id", "1"]]
+  Rendered subjects/show.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 23ms (Views: 16.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 13:56:20 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-17 13:56:20 -0400
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2013-09-17 13:56:20 -0400
+
+
+Started GET "/assets/forum_list.css?body=1" for 127.0.0.1 at 2013-09-17 13:56:20 -0400
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-09-17 13:56:20 -0400
+
+
+Started GET "/assets/forums.js?body=1" for 127.0.0.1 at 2013-09-17 13:56:20 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 13:56:20 -0400
+
+
+Started GET "/assets/forum_list.js?body=1" for 127.0.0.1 at 2013-09-17 13:56:20 -0400
+
+
+Started GET "/assets/subjects.css?body=1" for 127.0.0.1 at 2013-09-17 13:56:20 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 13:56:20 -0400
+
+
+Started GET "/assets/subjects.js?body=1" for 127.0.0.1 at 2013-09-17 13:56:20 -0400
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-09-17 13:56:20 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 13:56:20 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 13:56:20 -0400
+
+
+Started GET "/forums/1/subjects/1/topics" for 127.0.0.1 at 2013-09-17 13:56:25 -0400
+
+ActionController::RoutingError (No route matches [GET] "/forums/1/subjects/1/topics"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.4ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.1ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (48.8ms)
+
+
+Started GET "/forums/1/subjects/1/topics" for 127.0.0.1 at 2013-09-17 13:57:42 -0400
+Processing by TopicsController#index as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1"}
+  [1m[35mSubject Load (0.2ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 74ms
+
+NoMethodError (undefined method `topics' for #<Subject:0x007fd74ae6b008>):
+  app/controllers/topics_controller.rb:8:in `index'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.6ms)
+
+
+Started GET "/forums/1/subjects/1/topics" for 127.0.0.1 at 2013-09-17 13:58:22 -0400
+Processing by TopicsController#index as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1"}
+  [1m[36mSubject Load (0.2ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 24ms
+
+NoMethodError (undefined method `topics' for #<Subject:0x007fd74caa2f00>):
+  app/controllers/topics_controller.rb:8:in `index'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.9ms)
+
+
+Started GET "/forums/1/subjects/1/topics" for 127.0.0.1 at 2013-09-17 13:58:49 -0400
+Processing by TopicsController#index as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1"}
+  [1m[35mSubject Load (0.2ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 25ms
+
+NoMethodError (undefined method `topics' for #<Subject:0x007fd74cd7e648>):
+  app/controllers/topics_controller.rb:8:in `index'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.5ms)
+
+
+Started GET "/forums/1/subjects/1" for 127.0.0.1 at 2013-09-17 13:59:09 -0400
+Processing by SubjectsController#show as HTML
+  Parameters: {"forum_id"=>"1", "id"=>"1"}
+  [1m[36mForum Load (0.2ms)[0m  [1mSELECT "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mSubject Load (0.2ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."forum_id" = ? AND "subjects"."id" = ? LIMIT 1  [["forum_id", 1], ["id", "1"]]
+  Rendered subjects/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 53ms (Views: 8.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/forums/1/subjects" for 127.0.0.1 at 2013-09-17 13:59:11 -0400
+Processing by SubjectsController#index as HTML
+  Parameters: {"forum_id"=>"1"}
+  [1m[36mForum Load (0.2ms)[0m  [1mSELECT "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered subjects/index.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    13:   </thead>
+    14: 
+    15:   <tbody>
+    16:     <% @subjects.each do |subject| %>
+    17:       <tr>
+    18:         <td><%= subject.forum_id %></td>
+    19:         <td><%= subject.title %></td>
+  app/views/subjects/index.html.erb:16:in `_app_views_subjects_index_html_erb__504743680061208264_70281341369140'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.2ms)
+
+
+Started GET "/forums/1/subjects" for 127.0.0.1 at 2013-09-17 13:59:17 -0400
+Processing by SubjectsController#index as HTML
+  Parameters: {"forum_id"=>"1"}
+  [1m[35mForum Load (0.2ms)[0m  SELECT "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mSubject Load (0.2ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."forum_id" = ?[0m  [["forum_id", 1]]
+  Rendered subjects/index.html.erb within layouts/application (21.2ms)
+Completed 200 OK in 109ms (Views: 27.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2013-09-17 13:59:17 -0400
+
+
+Started GET "/assets/forum_list.css?body=1" for 127.0.0.1 at 2013-09-17 13:59:17 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-17 13:59:17 -0400
+
+
+Started GET "/assets/subjects.css?body=1" for 127.0.0.1 at 2013-09-17 13:59:17 -0400
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-09-17 13:59:17 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 13:59:17 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 13:59:17 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 13:59:17 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 13:59:17 -0400
+
+
+Started GET "/assets/forum_list.js?body=1" for 127.0.0.1 at 2013-09-17 13:59:17 -0400
+
+
+Started GET "/assets/subjects.js?body=1" for 127.0.0.1 at 2013-09-17 13:59:17 -0400
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-09-17 13:59:17 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 13:59:17 -0400
+
+
+Started GET "/assets/forums.js?body=1" for 127.0.0.1 at 2013-09-17 13:59:18 -0400
+
+
+Started GET "/forums/1/subjects/new" for 127.0.0.1 at 2013-09-17 13:59:30 -0400
+Processing by SubjectsController#new as HTML
+  Parameters: {"forum_id"=>"1"}
+  [1m[35mForum Load (0.2ms)[0m  SELECT "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered subjects/_form.html.erb (1.7ms)
+  Rendered subjects/new.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 46ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for(@subject) do |f| %>
+    2:   <% if @subject.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(@subject.errors.count, "error") %> prohibited this subject from being saved:</h2>
+  app/views/subjects/_form.html.erb:1:in `_app_views_subjects__form_html_erb__2709057219722351895_70281341843780'
+  app/views/subjects/new.html.erb:3:in `_app_views_subjects_new_html_erb___2040840303838758473_70281341807620'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.5ms)
+
+
+Started GET "/forums/1/subjects/new" for 127.0.0.1 at 2013-09-17 13:59:30 -0400
+Processing by SubjectsController#new as HTML
+  Parameters: {"forum_id"=>"1"}
+  [1m[36mForum Load (0.2ms)[0m  [1mSELECT "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered subjects/_form.html.erb (52.6ms)
+  Rendered subjects/new.html.erb within layouts/application (54.5ms)
+Completed 500 Internal Server Error in 60ms
+
+ActionView::Template::Error (First argument in form cannot contain nil or be empty):
+    1: <%= form_for(@subject) do |f| %>
+    2:   <% if @subject.errors.any? %>
+    3:     <div id="error_explanation">
+    4:       <h2><%= pluralize(@subject.errors.count, "error") %> prohibited this subject from being saved:</h2>
+  app/views/subjects/_form.html.erb:1:in `_app_views_subjects__form_html_erb__2709057219722351895_70281342514400'
+  app/views/subjects/new.html.erb:3:in `_app_views_subjects_new_html_erb___2040840303838758473_70281342476420'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.2ms)
+
+
+Started GET "/forums/1/subjects/1" for 127.0.0.1 at 2013-09-17 13:59:35 -0400
+Processing by SubjectsController#show as HTML
+  Parameters: {"forum_id"=>"1", "id"=>"1"}
+  [1m[35mForum Load (0.2ms)[0m  SELECT "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mSubject Load (0.5ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."forum_id" = ? AND "subjects"."id" = ? LIMIT 1[0m  [["forum_id", 1], ["id", "1"]]
+  Rendered subjects/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 18ms (Views: 8.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 13:59:36 -0400
+
+
+Started GET "/assets/forum_list.css?body=1" for 127.0.0.1 at 2013-09-17 13:59:36 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-17 13:59:36 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 13:59:36 -0400
+
+
+Started GET "/assets/subjects.css?body=1" for 127.0.0.1 at 2013-09-17 13:59:36 -0400
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-09-17 13:59:36 -0400
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2013-09-17 13:59:36 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 13:59:36 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 13:59:36 -0400
+
+
+Started GET "/assets/forum_list.js?body=1" for 127.0.0.1 at 2013-09-17 13:59:36 -0400
+
+
+Started GET "/assets/forums.js?body=1" for 127.0.0.1 at 2013-09-17 13:59:36 -0400
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-09-17 13:59:36 -0400
+
+
+Started GET "/assets/subjects.js?body=1" for 127.0.0.1 at 2013-09-17 13:59:36 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 13:59:36 -0400
+
+
+Started GET "/forums/1/subjects/1/topics" for 127.0.0.1 at 2013-09-17 13:59:40 -0400
+Processing by TopicsController#index as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1"}
+  [1m[35mSubject Load (0.3ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `topics' for #<Subject:0x007fd74cb43798>):
+  app/controllers/topics_controller.rb:8:in `index'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.9ms)
+
+
+Started GET "/forums/1/subjects/1/topics/1" for 127.0.0.1 at 2013-09-17 13:59:45 -0400
+Processing by TopicsController#show as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1", "id"=>"1"}
+  [1m[36mSubject Load (0.2ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `topics' for #<Subject:0x007fd74acc36d8>):
+  app/controllers/topics_controller.rb:68:in `set_topic'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.9ms)
+
+
+Started GET "/forums/1/subjects/1/topics" for 127.0.0.1 at 2013-09-17 13:59:48 -0400
+Processing by TopicsController#index as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1"}
+  [1m[35mSubject Load (0.2ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `topics' for #<Subject:0x007fd74adb9ab0>):
+  app/controllers/topics_controller.rb:8:in `index'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-17 13:59:57 -0400
+Processing by ForumsController#index as HTML
+  [1m[36mForum Load (0.3ms)[0m  [1mSELECT "forums".* FROM "forums"[0m
+  Rendered forums/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 16ms (Views: 13.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 13:59:57 -0400
+
+
+Started GET "/assets/forum_list.css?body=1" for 127.0.0.1 at 2013-09-17 13:59:57 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-17 13:59:57 -0400
+
+
+Started GET "/assets/subjects.css?body=1" for 127.0.0.1 at 2013-09-17 13:59:58 -0400
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2013-09-17 13:59:58 -0400
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-09-17 13:59:58 -0400
+
+
+Started GET "/assets/forums.js?body=1" for 127.0.0.1 at 2013-09-17 13:59:58 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 13:59:58 -0400
+
+
+Started GET "/assets/forum_list.js?body=1" for 127.0.0.1 at 2013-09-17 13:59:58 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 13:59:58 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 13:59:58 -0400
+
+
+Started GET "/assets/subjects.js?body=1" for 127.0.0.1 at 2013-09-17 13:59:58 -0400
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-09-17 13:59:58 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 13:59:58 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2013-09-17 13:59:58 -0400
+Processing by ForumsController#index as HTML
+  [1m[35mForum Load (0.2ms)[0m  SELECT "forums".* FROM "forums"
+  Rendered forums/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/forum_list.css?body=1" for 127.0.0.1 at 2013-09-17 13:59:58 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-17 13:59:58 -0400
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-09-17 13:59:58 -0400
+
+
+Started GET "/assets/subjects.css?body=1" for 127.0.0.1 at 2013-09-17 13:59:58 -0400
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2013-09-17 13:59:58 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 13:59:58 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 13:59:58 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 13:59:58 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 13:59:58 -0400
+
+
+Started GET "/assets/forum_list.js?body=1" for 127.0.0.1 at 2013-09-17 13:59:58 -0400
+
+
+Started GET "/assets/forums.js?body=1" for 127.0.0.1 at 2013-09-17 13:59:58 -0400
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-09-17 13:59:58 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 13:59:58 -0400
+
+
+Started GET "/assets/subjects.js?body=1" for 127.0.0.1 at 2013-09-17 13:59:58 -0400
+
+
+Started GET "/forums" for 127.0.0.1 at 2013-09-17 14:00:25 -0400
+Processing by ForumsController#index as HTML
+  [1m[36mForum Load (0.2ms)[0m  [1mSELECT "forums".* FROM "forums"[0m
+  Rendered forums/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 14:00:25 -0400
+
+
+Started GET "/assets/subjects.css?body=1" for 127.0.0.1 at 2013-09-17 14:00:25 -0400
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-09-17 14:00:25 -0400
+
+
+Started GET "/assets/forum_list.css?body=1" for 127.0.0.1 at 2013-09-17 14:00:25 -0400
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2013-09-17 14:00:25 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 14:00:25 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 14:00:25 -0400
+
+
+Started GET "/assets/subjects.js?body=1" for 127.0.0.1 at 2013-09-17 14:00:25 -0400
+
+
+Started GET "/assets/forum_list.js?body=1" for 127.0.0.1 at 2013-09-17 14:00:26 -0400
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-09-17 14:00:26 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 14:00:26 -0400
+
+
+Started GET "/assets/forums.js?body=1" for 127.0.0.1 at 2013-09-17 14:00:26 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-17 14:00:26 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 14:00:26 -0400
+
+
+Started GET "/forums/1" for 127.0.0.1 at 2013-09-17 14:00:26 -0400
+Processing by ForumsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mForum Load (0.2ms)[0m  SELECT "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered forums/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 16ms (Views: 11.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/forum_list.css?body=1" for 127.0.0.1 at 2013-09-17 14:00:26 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-17 14:00:26 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 14:00:26 -0400
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-09-17 14:00:26 -0400
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2013-09-17 14:00:26 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 14:00:26 -0400
+
+
+Started GET "/assets/subjects.css?body=1" for 127.0.0.1 at 2013-09-17 14:00:26 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 14:00:26 -0400
+
+
+Started GET "/assets/forum_list.js?body=1" for 127.0.0.1 at 2013-09-17 14:00:26 -0400
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-09-17 14:00:26 -0400
+
+
+Started GET "/assets/forums.js?body=1" for 127.0.0.1 at 2013-09-17 14:00:26 -0400
+
+
+Started GET "/assets/subjects.js?body=1" for 127.0.0.1 at 2013-09-17 14:00:26 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 14:00:26 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 14:00:26 -0400
+
+
+Started GET "/forums/1/subjects" for 127.0.0.1 at 2013-09-17 14:00:29 -0400
+Processing by SubjectsController#index as HTML
+  Parameters: {"forum_id"=>"1"}
+  [1m[36mForum Load (0.2ms)[0m  [1mSELECT "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mSubject Load (0.6ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."forum_id" = ?  [["forum_id", 1]]
+  Rendered subjects/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 12ms (Views: 8.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 14:00:29 -0400
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2013-09-17 14:00:29 -0400
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-09-17 14:00:29 -0400
+
+
+Started GET "/assets/subjects.css?body=1" for 127.0.0.1 at 2013-09-17 14:00:29 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 14:00:29 -0400
+
+
+Started GET "/assets/forum_list.js?body=1" for 127.0.0.1 at 2013-09-17 14:00:29 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-17 14:00:29 -0400
+
+
+Started GET "/assets/forums.js?body=1" for 127.0.0.1 at 2013-09-17 14:00:29 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 14:00:29 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 14:00:29 -0400
+
+
+Started GET "/assets/forum_list.css?body=1" for 127.0.0.1 at 2013-09-17 14:00:29 -0400
+
+
+Started GET "/assets/subjects.js?body=1" for 127.0.0.1 at 2013-09-17 14:00:29 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 14:00:29 -0400
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-09-17 14:00:29 -0400
+
+
+Started GET "/forums/1/subjects/1" for 127.0.0.1 at 2013-09-17 14:00:30 -0400
+Processing by SubjectsController#show as HTML
+  Parameters: {"forum_id"=>"1", "id"=>"1"}
+  [1m[36mForum Load (0.4ms)[0m  [1mSELECT "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mSubject Load (0.2ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."forum_id" = ? AND "subjects"."id" = ? LIMIT 1  [["forum_id", 1], ["id", "1"]]
+  Rendered subjects/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 15ms (Views: 10.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 14:00:30 -0400
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2013-09-17 14:00:30 -0400
+
+
+Started GET "/assets/forum_list.css?body=1" for 127.0.0.1 at 2013-09-17 14:00:30 -0400
+
+
+Started GET "/assets/subjects.css?body=1" for 127.0.0.1 at 2013-09-17 14:00:30 -0400
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-09-17 14:00:30 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-17 14:00:30 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 14:00:30 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 14:00:30 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 14:00:30 -0400
+
+
+Started GET "/assets/forum_list.js?body=1" for 127.0.0.1 at 2013-09-17 14:00:30 -0400
+
+
+Started GET "/assets/subjects.js?body=1" for 127.0.0.1 at 2013-09-17 14:00:30 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 14:00:30 -0400
+
+
+Started GET "/assets/forums.js?body=1" for 127.0.0.1 at 2013-09-17 14:00:30 -0400
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-09-17 14:00:30 -0400
+
+
+Started GET "/forums/1/subjects/1" for 127.0.0.1 at 2013-09-17 14:00:30 -0400
+Processing by SubjectsController#show as HTML
+  Parameters: {"forum_id"=>"1", "id"=>"1"}
+  [1m[36mForum Load (0.2ms)[0m  [1mSELECT "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mSubject Load (0.2ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."forum_id" = ? AND "subjects"."id" = ? LIMIT 1  [["forum_id", 1], ["id", "1"]]
+  Rendered subjects/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 19ms (Views: 11.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/forum_list.css?body=1" for 127.0.0.1 at 2013-09-17 14:00:30 -0400
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2013-09-17 14:00:30 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-17 14:00:30 -0400
+
+
+Started GET "/assets/subjects.css?body=1" for 127.0.0.1 at 2013-09-17 14:00:30 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 14:00:30 -0400
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-09-17 14:00:30 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 14:00:30 -0400
+
+
+Started GET "/assets/forum_list.js?body=1" for 127.0.0.1 at 2013-09-17 14:00:30 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 14:00:30 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 14:00:30 -0400
+
+
+Started GET "/assets/subjects.js?body=1" for 127.0.0.1 at 2013-09-17 14:00:30 -0400
+
+
+Started GET "/assets/forums.js?body=1" for 127.0.0.1 at 2013-09-17 14:00:30 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 14:00:30 -0400
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-09-17 14:00:30 -0400
+
+
+Started GET "/forums/1/subjects/1/topics" for 127.0.0.1 at 2013-09-17 14:00:34 -0400
+Processing by TopicsController#index as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1"}
+  [1m[36mSubject Load (2.8ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 6ms
+
+NoMethodError (undefined method `topics' for #<Subject:0x007fd74afd5d80>):
+  app/controllers/topics_controller.rb:8:in `index'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (110.8ms)
+
+
+Started GET "/forums/1/subjects/1/topics" for 127.0.0.1 at 2013-09-17 14:00:34 -0400
+Processing by TopicsController#index as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1"}
+  [1m[35mSubject Load (0.2ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `topics' for #<Subject:0x007fd74a36afc8>):
+  app/controllers/topics_controller.rb:8:in `index'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.5ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (45.9ms)
+
+
+Started GET "/forums/1/subjects/1/topics" for 127.0.0.1 at 2013-09-17 14:01:21 -0400
+Processing by TopicsController#index as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1"}
+  [1m[36mSubject Load (0.2ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `topics' for #<Subject:0x007fd74c860710>):
+  app/controllers/topics_controller.rb:8:in `index'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.8ms)
+
+
+Started GET "/forums/1/subjects/1/topics" for 127.0.0.1 at 2013-09-17 14:02:10 -0400
+Processing by TopicsController#index as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1"}
+  [1m[35mSubject Load (0.2ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 25ms
+
+NoMethodError (undefined method `topics' for #<Subject:0x007fd74ac800b8>):
+  app/controllers/topics_controller.rb:8:in `index'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.2ms)
+
+
+Started GET "/forums/1/subjects/1/topics" for 127.0.0.1 at 2013-09-17 14:02:15 -0400
+Processing by TopicsController#index as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1"}
+  [1m[36mSubject Load (0.2ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 74ms
+
+NoMethodError (undefined method `topics' for #<Subject:0x007fd74a24d550>):
+  app/controllers/topics_controller.rb:8:in `index'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.2ms)
+
+
+Started GET "/forums/1/subjects/1/topics" for 127.0.0.1 at 2013-09-17 14:03:01 -0400
+Processing by TopicsController#index as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1"}
+  [1m[35mSubject Load (0.3ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 25ms
+
+NoMethodError (undefined method `topics' for #<Subject:0x007fd74cb71008>):
+  app/controllers/topics_controller.rb:8:in `index'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.5ms)
+
+
+Started GET "/forums/1/subjects/1/topics" for 127.0.0.1 at 2013-09-17 14:03:45 -0400
+Processing by TopicsController#index as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1"}
+  [1m[36mSubject Load (0.2ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 78ms
+
+NoMethodError (undefined method `topics' for #<Subject:0x007fd74ae399e0>):
+  app/controllers/topics_controller.rb:8:in `index'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.2ms)
+
+
+Started GET "/forums/1/subjects/1/topics" for 127.0.0.1 at 2013-09-17 14:03:54 -0400
+Processing by TopicsController#index as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1"}
+  [1m[35mSubject Load (0.2ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 23ms
+
+NoMethodError (undefined method `topics' for #<Subject:0x007fd74caf1420>):
+  app/controllers/topics_controller.rb:8:in `index'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.7ms)
+
+
+Started GET "/forums/1/subjects/1/topics" for 127.0.0.1 at 2013-09-17 14:06:48 -0400
+Processing by TopicsController#index as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1"}
+  [1m[36mSubject Load (0.2ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 72ms
+
+NoMethodError (undefined method `topics' for #<Subject:0x007fd74cdfeac8>):
+  app/controllers/topics_controller.rb:8:in `index'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.3ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.0ms)
+
+
+Started GET "/forums/1/subjects/1/topics" for 127.0.0.1 at 2013-09-17 14:08:05 -0400
+
+ActionController::RoutingError (No route matches [GET] "/forums/1/subjects/1/topics"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.8ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (42.6ms)
+
+
+Started GET "/subjects/1/topics" for 127.0.0.1 at 2013-09-17 14:08:20 -0400
+Processing by TopicsController#index as HTML
+  Parameters: {"subject_id"=>"1"}
+  [1m[35mSubject Load (0.2ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 23ms
+
+NoMethodError (undefined method `topics' for #<Subject:0x007fd74ac9b890>):
+  app/controllers/topics_controller.rb:8:in `index'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.4ms)
+
+
+Started GET "/subjects/1/topics" for 127.0.0.1 at 2013-09-17 14:09:12 -0400
+
+ActionController::RoutingError (No route matches [GET] "/subjects/1/topics"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.2ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (47.4ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (88.2ms)
+
+
+Started GET "/forums/1/subjects/1/topics" for 127.0.0.1 at 2013-09-17 14:09:23 -0400
+Processing by TopicsController#index as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1"}
+  [1m[36mSubject Load (0.2ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 25ms
+
+NoMethodError (undefined method `topics' for #<Subject:0x007fd74ab63270>):
+  app/controllers/topics_controller.rb:8:in `index'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.5ms)
+
+
+Started GET "/forums/1/subjects/1/topics" for 127.0.0.1 at 2013-09-17 14:09:24 -0400
+Processing by TopicsController#index as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1"}
+  [1m[35mSubject Load (0.2ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 15ms
+
+NoMethodError (undefined method `topics' for #<Subject:0x007fd74c9b3540>):
+  app/controllers/topics_controller.rb:8:in `index'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.2ms)
+
+
+Started GET "/forums/1/subjects/1/" for 127.0.0.1 at 2013-09-17 14:09:27 -0400
+Processing by SubjectsController#show as HTML
+  Parameters: {"forum_id"=>"1", "id"=>"1"}
+  [1m[36mForum Load (0.2ms)[0m  [1mSELECT "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mSubject Load (0.3ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."forum_id" = ? AND "subjects"."id" = ? LIMIT 1  [["forum_id", 1], ["id", "1"]]
+  Rendered subjects/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 32ms (Views: 8.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 14:09:27 -0400
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2013-09-17 14:09:27 -0400
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-09-17 14:09:27 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 14:09:27 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 14:09:27 -0400
+
+
+Started GET "/assets/forums.js?body=1" for 127.0.0.1 at 2013-09-17 14:09:27 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-17 14:09:27 -0400
+
+
+Started GET "/assets/forum_list.css?body=1" for 127.0.0.1 at 2013-09-17 14:09:27 -0400
+
+
+Started GET "/assets/subjects.js?body=1" for 127.0.0.1 at 2013-09-17 14:09:27 -0400
+
+
+Started GET "/assets/subjects.css?body=1" for 127.0.0.1 at 2013-09-17 14:09:27 -0400
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-09-17 14:09:27 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 14:09:27 -0400
+
+
+Started GET "/assets/forum_list.js?body=1" for 127.0.0.1 at 2013-09-17 14:09:27 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 14:09:27 -0400
+
+
+Started GET "/forums/1/subjects/1" for 127.0.0.1 at 2013-09-17 14:09:35 -0400
+Processing by SubjectsController#show as HTML
+  Parameters: {"forum_id"=>"1", "id"=>"1"}
+  [1m[36mForum Load (0.2ms)[0m  [1mSELECT "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mSubject Load (0.2ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."forum_id" = ? AND "subjects"."id" = ? LIMIT 1  [["forum_id", 1], ["id", "1"]]
+  Rendered subjects/show.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 16ms (Views: 11.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/forum_list.css?body=1" for 127.0.0.1 at 2013-09-17 14:09:35 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-17 14:09:35 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 14:09:35 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 14:09:35 -0400
+
+
+Started GET "/assets/subjects.css?body=1" for 127.0.0.1 at 2013-09-17 14:09:35 -0400
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2013-09-17 14:09:35 -0400
+
+
+Started GET "/assets/forum_list.js?body=1" for 127.0.0.1 at 2013-09-17 14:09:35 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 14:09:35 -0400
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-09-17 14:09:35 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 14:09:35 -0400
+
+
+Started GET "/assets/forums.js?body=1" for 127.0.0.1 at 2013-09-17 14:09:35 -0400
+
+
+Started GET "/assets/subjects.js?body=1" for 127.0.0.1 at 2013-09-17 14:09:35 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 14:09:35 -0400
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-09-17 14:09:35 -0400
+
+
+Started GET "/forums/1/subjects" for 127.0.0.1 at 2013-09-17 14:09:36 -0400
+Processing by SubjectsController#index as HTML
+  Parameters: {"forum_id"=>"1"}
+  [1m[36mForum Load (0.2ms)[0m  [1mSELECT "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mSubject Load (0.3ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."forum_id" = ?  [["forum_id", 1]]
+  Rendered subjects/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 12ms (Views: 8.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 14:09:36 -0400
+
+
+Started GET "/assets/subjects.css?body=1" for 127.0.0.1 at 2013-09-17 14:09:36 -0400
+
+
+Started GET "/assets/forum_list.css?body=1" for 127.0.0.1 at 2013-09-17 14:09:36 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 14:09:36 -0400
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2013-09-17 14:09:36 -0400
+
+
+Started GET "/assets/forum_list.js?body=1" for 127.0.0.1 at 2013-09-17 14:09:36 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-17 14:09:36 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 14:09:36 -0400
+
+
+Started GET "/assets/forums.js?body=1" for 127.0.0.1 at 2013-09-17 14:09:36 -0400
+
+
+Started GET "/assets/subjects.js?body=1" for 127.0.0.1 at 2013-09-17 14:09:36 -0400
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-09-17 14:09:36 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 14:09:36 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 14:09:36 -0400
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-09-17 14:09:36 -0400
+
+
+Started GET "/forums/1/subjects" for 127.0.0.1 at 2013-09-17 14:11:39 -0400
+Processing by SubjectsController#index as HTML
+  Parameters: {"forum_id"=>"1"}
+  [1m[36mForum Load (0.2ms)[0m  [1mSELECT "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mSubject Load (0.2ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."forum_id" = ?  [["forum_id", 1]]
+  Rendered subjects/index.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"topics", :forum_id=>"1"} missing required keys: [:subject_id]):
+    15:   <tbody>
+    16:     <% @subjects.each do |subject| %>
+    17:       <tr>
+    18:         <td><%= link_to "#{subject.title}", forum_subject_topics_path  %></td>
+    19:         <td><%= subject.description %></td>
+    20:       </tr>
+    21:     <% end %>
+  app/views/subjects/index.html.erb:18:in `block in _app_views_subjects_index_html_erb__504743680061208264_70281340064640'
+  app/views/subjects/index.html.erb:16:in `_app_views_subjects_index_html_erb__504743680061208264_70281340064640'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.6ms)
+
+
+Started GET "/forums/1/subjects" for 127.0.0.1 at 2013-09-17 14:11:46 -0400
+Processing by SubjectsController#index as HTML
+  Parameters: {"forum_id"=>"1"}
+  [1m[36mForum Load (0.2ms)[0m  [1mSELECT "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mSubject Load (0.2ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."forum_id" = ?  [["forum_id", 1]]
+  Rendered subjects/index.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"topics", :forum_id=>"1"} missing required keys: [:subject_id]):
+    15:   <tbody>
+    16:     <% @subjects.each do |subject| %>
+    17:       <tr>
+    18:         <td><%= link_to "#{subject.title}", forum_subject_topics_path %></td>
+    19:         <td><%= subject.description %></td>
+    20:       </tr>
+    21:     <% end %>
+  app/views/subjects/index.html.erb:18:in `block in _app_views_subjects_index_html_erb__504743680061208264_70281341239000'
+  app/views/subjects/index.html.erb:16:in `_app_views_subjects_index_html_erb__504743680061208264_70281341239000'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.6ms)
+
+
+Started GET "/forums/1/subjects" for 127.0.0.1 at 2013-09-17 14:12:14 -0400
+Processing by SubjectsController#index as HTML
+  Parameters: {"forum_id"=>"1"}
+  [1m[36mForum Load (0.2ms)[0m  [1mSELECT "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mSubject Load (0.2ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."forum_id" = ?  [["forum_id", 1]]
+  Rendered subjects/index.html.erb within layouts/application (15.5ms)
+Completed 500 Internal Server Error in 21ms
+
+ActionView::Template::Error (undefined local variable or method `forum' for #<#<Class:0x007fd74cc5d598>:0x007fd74ad539b8>):
+    15:   <tbody>
+    16:     <% @subjects.each do |subject| %>
+    17:       <tr>
+    18:         <td><%= link_to "#{subject.title}", "forums/#{forum.id}/subjects/#{subject.id}/topics"  %></td>
+    19:         <td><%= subject.description %></td>
+    20:       </tr>
+    21:     <% end %>
+  app/views/subjects/index.html.erb:18:in `block in _app_views_subjects_index_html_erb__504743680061208264_70281325089740'
+  app/views/subjects/index.html.erb:16:in `_app_views_subjects_index_html_erb__504743680061208264_70281325089740'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.2ms)
+
+
+Started GET "/forums/1/subjects" for 127.0.0.1 at 2013-09-17 14:12:39 -0400
+Processing by SubjectsController#index as HTML
+  Parameters: {"forum_id"=>"1"}
+  [1m[36mForum Load (0.2ms)[0m  [1mSELECT "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mSubject Load (0.3ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."forum_id" = ?  [["forum_id", 1]]
+  Rendered subjects/index.html.erb within layouts/application (65.6ms)
+Completed 500 Internal Server Error in 71ms
+
+ActionView::Template::Error (undefined local variable or method `forum' for #<#<Class:0x007fd74cc5d598>:0x007fd74cdad150>):
+    15:   <tbody>
+    16:     <% @subjects.each do |subject| %>
+    17:       <tr>
+    18:         <td><%= link_to "#{subject.title}", "forums/#{forum.id}/subjects/#{subject.id}/topics"%></td>
+    19:         <td><%= subject.description %></td>
+    20:       </tr>
+    21:     <% end %>
+  app/views/subjects/index.html.erb:18:in `block in _app_views_subjects_index_html_erb__504743680061208264_70281342056100'
+  app/views/subjects/index.html.erb:16:in `_app_views_subjects_index_html_erb__504743680061208264_70281342056100'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (16.6ms)
+
+
+Started GET "/forums/1/subjects" for 127.0.0.1 at 2013-09-17 14:14:07 -0400
+
+SyntaxError (/Users/mikeburkle/Projects/zero/config/routes.rb:15: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+  get 'forum#index' as: :home
+                      ^):
+  activesupport (4.0.0) lib/active_support/dependencies.rb:222:in `load'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:222:in `block in load'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:213:in `load_dependency'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:222:in `load'
+  railties (4.0.0) lib/rails/application/routes_reloader.rb:40:in `block in load_paths'
+  railties (4.0.0) lib/rails/application/routes_reloader.rb:40:in `each'
+  railties (4.0.0) lib/rails/application/routes_reloader.rb:40:in `load_paths'
+  railties (4.0.0) lib/rails/application/routes_reloader.rb:16:in `reload!'
+  railties (4.0.0) lib/rails/application/routes_reloader.rb:26:in `block in updater'
+  activesupport (4.0.0) lib/active_support/file_update_checker.rb:75:in `call'
+  activesupport (4.0.0) lib/active_support/file_update_checker.rb:75:in `execute'
+  railties (4.0.0) lib/rails/application/routes_reloader.rb:7:in `execute'
+  railties (4.0.0) lib/rails/application/finisher.rb:81:in `block (2 levels) in <module:Finisher>'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:397:in `_run__2386103685850415409__prepare__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:74:in `prepare!'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:62:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.5ms)
+
+
+Started GET "/forums/1/subjects" for 127.0.0.1 at 2013-09-17 14:14:45 -0400
+Processing by SubjectsController#index as HTML
+  Parameters: {"forum_id"=>"1"}
+  [1m[36mForum Load (0.2ms)[0m  [1mSELECT "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mSubject Load (0.2ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."forum_id" = ?  [["forum_id", 1]]
+  Rendered subjects/index.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 100ms (Views: 73.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 14:14:45 -0400
+
+
+Started GET "/assets/forum_list.css?body=1" for 127.0.0.1 at 2013-09-17 14:14:45 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-17 14:14:45 -0400
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2013-09-17 14:14:45 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 14:14:45 -0400
+
+
+Started GET "/assets/subjects.css?body=1" for 127.0.0.1 at 2013-09-17 14:14:45 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 14:14:45 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 14:14:45 -0400
+
+
+Started GET "/assets/forum_list.js?body=1" for 127.0.0.1 at 2013-09-17 14:14:45 -0400
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-09-17 14:14:45 -0400
+
+
+Started GET "/assets/forums.js?body=1" for 127.0.0.1 at 2013-09-17 14:14:45 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 14:14:45 -0400
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-09-17 14:14:45 -0400
+
+
+Started GET "/assets/subjects.js?body=1" for 127.0.0.1 at 2013-09-17 14:14:45 -0400
+
+
+Started GET "/forums/1/topics" for 127.0.0.1 at 2013-09-17 14:14:49 -0400
+
+ActionController::RoutingError (No route matches [GET] "/forums/1/topics"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.1ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (39.4ms)
+
+
+Started GET "/forums/1/topics" for 127.0.0.1 at 2013-09-17 14:14:49 -0400
+
+ActionController::RoutingError (No route matches [GET] "/forums/1/topics"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (38.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/forums/1/topics" for 127.0.0.1 at 2013-09-17 14:15:30 -0400
+
+ActionController::RoutingError (No route matches [GET] "/forums/1/topics"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (37.6ms)
+
+
+Started GET "/forums/1/topics" for 127.0.0.1 at 2013-09-17 14:15:30 -0400
+
+ActionController::RoutingError (No route matches [GET] "/forums/1/topics"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.1ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (37.9ms)
+
+
+Started GET "/forums/1/topics" for 127.0.0.1 at 2013-09-17 14:15:38 -0400
+
+ActionController::RoutingError (No route matches [GET] "/forums/1/topics"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (4.0ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (55.5ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (93.8ms)
+
+
+Started GET "/topics" for 127.0.0.1 at 2013-09-17 14:16:23 -0400
+Processing by TopicsController#index as HTML
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Subject without an ID):
+  app/controllers/topics_controller.rb:72:in `set_subject'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.5ms)
+
+
+Started GET "/topics/new" for 127.0.0.1 at 2013-09-17 14:16:24 -0400
+Processing by TopicsController#new as HTML
+Completed 404 Not Found in 1ms
+
+ActiveRecord::RecordNotFound (Couldn't find Subject without an ID):
+  app/controllers/topics_controller.rb:72:in `set_subject'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.2ms)
+
+
+Started GET "/forums" for 127.0.0.1 at 2013-09-17 14:16:46 -0400
+Processing by ForumsController#index as HTML
+  [1m[36mForum Load (0.1ms)[0m  [1mSELECT "forums".* FROM "forums"[0m
+  Rendered forums/index.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 34ms (Views: 24.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-09-17 14:16:46 -0400
+
+
+Started GET "/assets/forum_list.css?body=1" for 127.0.0.1 at 2013-09-17 14:16:46 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 14:16:46 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 14:16:46 -0400
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2013-09-17 14:16:46 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 14:16:46 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 14:16:46 -0400
+
+
+Started GET "/assets/forums.js?body=1" for 127.0.0.1 at 2013-09-17 14:16:46 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-17 14:16:46 -0400
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-09-17 14:16:46 -0400
+
+
+Started GET "/assets/forum_list.js?body=1" for 127.0.0.1 at 2013-09-17 14:16:46 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 14:16:46 -0400
+
+
+Started GET "/assets/subjects.css?body=1" for 127.0.0.1 at 2013-09-17 14:16:46 -0400
+
+
+Started GET "/assets/subjects.js?body=1" for 127.0.0.1 at 2013-09-17 14:16:46 -0400
+
+
+Started GET "/forums/1/subjects" for 127.0.0.1 at 2013-09-17 14:16:48 -0400
+Processing by SubjectsController#index as HTML
+  Parameters: {"forum_id"=>"1"}
+  [1m[35mForum Load (0.3ms)[0m  SELECT "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mSubject Load (0.2ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."forum_id" = ?[0m  [["forum_id", 1]]
+  Rendered subjects/index.html.erb within layouts/application (70.9ms)
+Completed 200 OK in 83ms (Views: 77.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 14:16:48 -0400
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-09-17 14:16:48 -0400
+
+
+Started GET "/assets/forum_list.css?body=1" for 127.0.0.1 at 2013-09-17 14:16:48 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 14:16:48 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 14:16:48 -0400
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2013-09-17 14:16:48 -0400
+
+
+Started GET "/assets/subjects.css?body=1" for 127.0.0.1 at 2013-09-17 14:16:48 -0400
+
+
+Started GET "/assets/forums.js?body=1" for 127.0.0.1 at 2013-09-17 14:16:48 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-17 14:16:48 -0400
+
+
+Started GET "/assets/forum_list.js?body=1" for 127.0.0.1 at 2013-09-17 14:16:48 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 14:16:48 -0400
+
+
+Started GET "/assets/subjects.js?body=1" for 127.0.0.1 at 2013-09-17 14:16:48 -0400
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-09-17 14:16:48 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 14:16:48 -0400
+
+
+Started GET "/forums/1/subjects/1" for 127.0.0.1 at 2013-09-17 14:16:49 -0400
+Processing by SubjectsController#show as HTML
+  Parameters: {"forum_id"=>"1", "id"=>"1"}
+  [1m[35mForum Load (0.2ms)[0m  SELECT "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mSubject Load (0.3ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."forum_id" = ? AND "subjects"."id" = ? LIMIT 1[0m  [["forum_id", 1], ["id", "1"]]
+  Rendered subjects/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 25ms (Views: 11.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/forum_list.css?body=1" for 127.0.0.1 at 2013-09-17 14:16:49 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-17 14:16:49 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 14:16:49 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 14:16:49 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 14:16:49 -0400
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2013-09-17 14:16:49 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 14:16:49 -0400
+
+
+Started GET "/assets/subjects.css?body=1" for 127.0.0.1 at 2013-09-17 14:16:49 -0400
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-09-17 14:16:49 -0400
+
+
+Started GET "/assets/forum_list.js?body=1" for 127.0.0.1 at 2013-09-17 14:16:49 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 14:16:49 -0400
+
+
+Started GET "/assets/subjects.js?body=1" for 127.0.0.1 at 2013-09-17 14:16:49 -0400
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-09-17 14:16:49 -0400
+
+
+Started GET "/assets/forums.js?body=1" for 127.0.0.1 at 2013-09-17 14:16:49 -0400
+
+
+Started GET "/forums/1/subjects/1/topics" for 127.0.0.1 at 2013-09-17 14:16:54 -0400
+Processing by TopicsController#index as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1"}
+  [1m[35mSubject Load (0.8ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 6ms
+
+NoMethodError (undefined method `topics' for #<Subject:0x007fd74ac90e90>):
+  app/controllers/topics_controller.rb:8:in `index'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (39.6ms)
+
+
+Started GET "/forums/1/subjects/1/topics" for 127.0.0.1 at 2013-09-17 14:16:54 -0400
+Processing by TopicsController#index as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1"}
+  [1m[36mSubject Load (0.2ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `topics' for #<Subject:0x007fd74abf5dc8>):
+  app/controllers/topics_controller.rb:8:in `index'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (30.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (4.2ms)[0m  [1mINSERT INTO "forums" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Tue, 17 Sep 2013 18:18:04 UTC +00:00], ["description", "The new MMO that's sweeping the nation!"], ["title", "FF XIV"], ["updated_at", Tue, 17 Sep 2013 18:18:04 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "subjects" ("created_at", "description", "forum_id", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Tue, 17 Sep 2013 18:18:04 UTC +00:00], ["description", "Where the makers gather"], ["forum_id", 1], ["title", "Crafting"], ["updated_at", Tue, 17 Sep 2013 18:18:04 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "subjects" ("created_at", "description", "forum_id", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Tue, 17 Sep 2013 18:18:04 UTC +00:00], ["description", "How to gain levels"], ["forum_id", 1], ["title", "Leveling"], ["updated_at", Tue, 17 Sep 2013 18:18:04 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.4ms)[0m  [1mINSERT INTO "forums" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Tue, 17 Sep 2013 18:18:22 UTC +00:00], ["description", "The new MMO that's sweeping the nation!"], ["title", "FF XIV"], ["updated_at", Tue, 17 Sep 2013 18:18:22 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "subjects" ("created_at", "description", "forum_id", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Tue, 17 Sep 2013 18:18:22 UTC +00:00], ["description", "Where the makers gather"], ["forum_id", 1], ["title", "Crafting"], ["updated_at", Tue, 17 Sep 2013 18:18:22 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "subjects" ("created_at", "description", "forum_id", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Tue, 17 Sep 2013 18:18:22 UTC +00:00], ["description", "How to gain levels"], ["forum_id", 1], ["title", "Leveling"], ["updated_at", Tue, 17 Sep 2013 18:18:22 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "topics" ("created_at", "description", "subject_id", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Tue, 17 Sep 2013 18:18:22 UTC +00:00], ["description", "THis is fun!"], ["subject_id", 1], ["title", "Mining"], ["updated_at", Tue, 17 Sep 2013 18:18:22 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/forums/1/subjects/1/topics" for 127.0.0.1 at 2013-09-17 14:18:26 -0400
+Processing by TopicsController#index as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1"}
+  [1m[35mSubject Load (0.2ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `topics' for #<Subject:0x007fd74cd6dd20>):
+  app/controllers/topics_controller.rb:8:in `index'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.2ms)
+
+
+Started GET "/forums/1/subjects/1/topics/1" for 127.0.0.1 at 2013-09-17 14:18:30 -0400
+Processing by TopicsController#show as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1", "id"=>"1"}
+  [1m[36mSubject Load (0.2ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `topics' for #<Subject:0x007fd74ae71f48>):
+  app/controllers/topics_controller.rb:68:in `set_topic'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.5ms)
+
+
+Started GET "/forums/1/subjects/1" for 127.0.0.1 at 2013-09-17 14:18:36 -0400
+Processing by SubjectsController#show as HTML
+  Parameters: {"forum_id"=>"1", "id"=>"1"}
+  [1m[35mForum Load (0.2ms)[0m  SELECT "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mSubject Load (0.2ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."forum_id" = ? AND "subjects"."id" = ? LIMIT 1[0m  [["forum_id", 1], ["id", "1"]]
+  Rendered subjects/show.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 19ms (Views: 14.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/forum_list.css?body=1" for 127.0.0.1 at 2013-09-17 14:18:37 -0400
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2013-09-17 14:18:37 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 14:18:37 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 14:18:37 -0400
+
+
+Started GET "/assets/subjects.css?body=1" for 127.0.0.1 at 2013-09-17 14:18:37 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-17 14:18:37 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 14:18:37 -0400
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-09-17 14:18:37 -0400
+
+
+Started GET "/assets/forums.js?body=1" for 127.0.0.1 at 2013-09-17 14:18:37 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 14:18:37 -0400
+
+
+Started GET "/assets/subjects.js?body=1" for 127.0.0.1 at 2013-09-17 14:18:37 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 14:18:37 -0400
+
+
+Started GET "/assets/forum_list.js?body=1" for 127.0.0.1 at 2013-09-17 14:18:37 -0400
+
+
+Started GET "/forums/1/subjects/1" for 127.0.0.1 at 2013-09-17 14:18:37 -0400
+Processing by SubjectsController#show as HTML
+  Parameters: {"forum_id"=>"1", "id"=>"1"}
+  [1m[35mForum Load (0.4ms)[0m  SELECT "forums".* FROM "forums" WHERE "forums"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mSubject Load (0.2ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."forum_id" = ? AND "subjects"."id" = ? LIMIT 1[0m  [["forum_id", 1], ["id", "1"]]
+  Rendered subjects/show.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 20ms (Views: 15.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-09-17 14:18:37 -0400
+
+
+Started GET "/forums/1/subjects/1/topics" for 127.0.0.1 at 2013-09-17 14:18:43 -0400
+Processing by TopicsController#index as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1"}
+  [1m[35mSubject Load (0.2ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `topics' for #<Subject:0x007fd74a7a96e8>):
+  app/controllers/topics_controller.rb:8:in `index'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.4ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.5ms)
+
+
+Started GET "/forums/1/subjects/1/topics" for 127.0.0.1 at 2013-09-17 14:18:43 -0400
+Processing by TopicsController#index as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1"}
+  [1m[36mSubject Load (0.2ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `topics' for #<Subject:0x007fd74c992818>):
+  app/controllers/topics_controller.rb:8:in `index'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.8ms)
+
+
+Started GET "/forums/1/subjects/1/topics" for 127.0.0.1 at 2013-09-17 14:19:29 -0400
+Processing by TopicsController#index as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1"}
+Completed 404 Not Found in 3ms
+
+ActiveRecord::RecordNotFound (Couldn't find Subject without an ID):
+  app/controllers/topics_controller.rb:72:in `set_subject'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.4ms)
+
+
+Started GET "/forums/1/subjects/1/topics" for 127.0.0.1 at 2013-09-17 14:19:50 -0400
+Processing by TopicsController#index as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1"}
+  [1m[35mSubject Load (0.2ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 500 Internal Server Error in 73ms
+
+NoMethodError (undefined method `topics' for #<Subject:0x007fd74ceae4c8>):
+  app/controllers/topics_controller.rb:8:in `index'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.3ms)
+
+
+Started GET "/forums/1/subjects/1/topics" for 127.0.0.1 at 2013-09-17 14:20:59 -0400
+Processing by TopicsController#index as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1"}
+  [1m[36mSubject Load (0.2ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered topics/index.html.erb within layouts/application (1.7ms)
+Completed 500 Internal Server Error in 33ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    13:   </thead>
+    14: 
+    15:   <tbody>
+    16:     <% @topics.each do |topic| %>
+    17:       <tr>
+    18:         <td><%= topic.subject_id %></td>
+    19:         <td><%= topic.title %></td>
+  app/views/topics/index.html.erb:16:in `_app_views_topics_index_html_erb___3564968263220115443_70281341333280'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.0ms)
+
+
+Started GET "/forums/1/subjects/1/topics/1" for 127.0.0.1 at 2013-09-17 14:21:09 -0400
+Processing by TopicsController#show as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1", "id"=>"1"}
+  [1m[35mSubject Load (0.2ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT "topics".* FROM "topics" WHERE "topics"."subject_id" = ? AND "topics"."id" = ? LIMIT 1[0m  [["subject_id", 1], ["id", "1"]]
+  Rendered topics/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 30ms (Views: 8.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 14:21:09 -0400
+
+
+Started GET "/assets/forum_list.css?body=1" for 127.0.0.1 at 2013-09-17 14:21:09 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 14:21:09 -0400
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2013-09-17 14:21:09 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-17 14:21:09 -0400
+
+
+Started GET "/assets/subjects.css?body=1" for 127.0.0.1 at 2013-09-17 14:21:09 -0400
+
+
+Started GET "/assets/forum_list.js?body=1" for 127.0.0.1 at 2013-09-17 14:21:09 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 14:21:09 -0400
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-09-17 14:21:09 -0400
+
+
+Started GET "/assets/forums.js?body=1" for 127.0.0.1 at 2013-09-17 14:21:09 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 14:21:09 -0400
+
+
+Started GET "/assets/subjects.js?body=1" for 127.0.0.1 at 2013-09-17 14:21:09 -0400
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-09-17 14:21:09 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 14:21:09 -0400
+
+
+Started GET "/forums/1/subjects/1/topics" for 127.0.0.1 at 2013-09-17 14:21:12 -0400
+Processing by TopicsController#index as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1"}
+  [1m[35mSubject Load (0.2ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered topics/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    13:   </thead>
+    14: 
+    15:   <tbody>
+    16:     <% @topics.each do |topic| %>
+    17:       <tr>
+    18:         <td><%= topic.subject_id %></td>
+    19:         <td><%= topic.title %></td>
+  app/views/topics/index.html.erb:16:in `_app_views_topics_index_html_erb___3564968263220115443_70281341333280'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.9ms)
+
+
+Started GET "/forums/1/subjects/1/topics" for 127.0.0.1 at 2013-09-17 14:21:13 -0400
+Processing by TopicsController#index as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1"}
+  [1m[36mSubject Load (0.2ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered topics/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    13:   </thead>
+    14: 
+    15:   <tbody>
+    16:     <% @topics.each do |topic| %>
+    17:       <tr>
+    18:         <td><%= topic.subject_id %></td>
+    19:         <td><%= topic.title %></td>
+  app/views/topics/index.html.erb:16:in `_app_views_topics_index_html_erb___3564968263220115443_70281341333280'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (19.9ms)
+
+
+Started GET "/forums/1/subjects/1/topics" for 127.0.0.1 at 2013-09-17 14:23:05 -0400
+Processing by TopicsController#index as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1"}
+  [1m[35mSubject Load (0.2ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered topics/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    13:   </thead>
+    14: 
+    15:   <tbody>
+    16:     <% @topics.each do |topic| %>
+    17:       <tr>
+    18:         <td><%= topic.title %></td>
+    19:         <td><%= topic.description %></td>
+  app/views/topics/index.html.erb:16:in `_app_views_topics_index_html_erb___3564968263220115443_70281340114980'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.8ms)
+
+
+Started GET "/forums/1/subjects/1/topics" for 127.0.0.1 at 2013-09-17 14:24:09 -0400
+Processing by TopicsController#index as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1"}
+  [1m[36mSubject Load (0.2ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics" WHERE "topics"."subject_id" = ?  [["subject_id", 1]]
+  Rendered topics/index.html.erb within layouts/application (80.3ms)
+Completed 500 Internal Server Error in 111ms
+
+ActionView::Template::Error (undefined method `new_subject_topic_path' for #<#<Class:0x007fd74cd4ff50>:0x007fd74cd4f118>):
+    24: 
+    25: <br>
+    26: 
+    27: <%= link_to 'New Topic', new_subject_topic_path(params[:subject_id]) %>
+  app/views/topics/index.html.erb:27:in `_app_views_topics_index_html_erb___3564968263220115443_70281340114980'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (15.8ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateDiscusses (20130917183458)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "discusses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "topic_id" integer, "title" varchar(255), "description" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130917183458"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePosts (20130917183615)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "discuss_id" integer, "title" varchar(255), "description" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20130917183615"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/forums/1/subjects/1/topics/1" for 127.0.0.1 at 2013-09-17 14:45:14 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TopicsController#show as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1", "id"=>"1"}
+  [1m[35mSubject Load (0.2ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mTopic Load (0.3ms)[0m  [1mSELECT "topics".* FROM "topics" WHERE "topics"."subject_id" = ? AND "topics"."id" = ? LIMIT 1[0m  [["subject_id", 1], ["id", "1"]]
+  Rendered topics/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 435ms (Views: 319.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 14:45:15 -0400
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2013-09-17 14:45:15 -0400
+
+
+Started GET "/assets/discusses.css?body=1" for 127.0.0.1 at 2013-09-17 14:45:15 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-17 14:45:15 -0400
+
+
+Started GET "/assets/discusses.js?body=1" for 127.0.0.1 at 2013-09-17 14:45:15 -0400
+
+
+Started GET "/assets/forum_list.css?body=1" for 127.0.0.1 at 2013-09-17 14:45:15 -0400
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-09-17 14:45:15 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 14:45:15 -0400
+
+
+Started GET "/forums/1/subjects/1/topics/1" for 127.0.0.1 at 2013-09-17 14:45:15 -0400
+Processing by TopicsController#show as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1", "id"=>"1"}
+  [1m[35mSubject Load (0.2ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT "topics".* FROM "topics" WHERE "topics"."subject_id" = ? AND "topics"."id" = ? LIMIT 1[0m  [["subject_id", 1], ["id", "1"]]
+  Rendered topics/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 17ms (Views: 12.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 14:45:15 -0400
+
+
+Started GET "/assets/subjects.css?body=1" for 127.0.0.1 at 2013-09-17 14:45:15 -0400
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-09-17 14:45:15 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 14:45:15 -0400
+
+
+Started GET "/assets/forum_list.js?body=1" for 127.0.0.1 at 2013-09-17 14:45:15 -0400
+
+
+Started GET "/assets/subjects.js?body=1" for 127.0.0.1 at 2013-09-17 14:45:15 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-09-17 14:45:15 -0400
+
+
+Started GET "/assets/forums.js?body=1" for 127.0.0.1 at 2013-09-17 14:45:15 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 14:45:15 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-09-17 14:45:15 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 14:45:15 -0400
+
+
+Started GET "/assets/discusses.css?body=1" for 127.0.0.1 at 2013-09-17 14:45:15 -0400
+
+
+Started GET "/assets/forum_list.css?body=1" for 127.0.0.1 at 2013-09-17 14:45:15 -0400
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2013-09-17 14:45:15 -0400
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-09-17 14:45:15 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 14:45:15 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-17 14:45:15 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 14:45:15 -0400
+
+
+Started GET "/assets/forums.js?body=1" for 127.0.0.1 at 2013-09-17 14:45:15 -0400
+
+
+Started GET "/assets/subjects.css?body=1" for 127.0.0.1 at 2013-09-17 14:45:15 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-09-17 14:45:15 -0400
+
+
+Started GET "/assets/discusses.js?body=1" for 127.0.0.1 at 2013-09-17 14:45:15 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-09-17 14:45:15 -0400
+
+
+Started GET "/assets/forum_list.js?body=1" for 127.0.0.1 at 2013-09-17 14:45:15 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 14:45:15 -0400
+
+
+Started GET "/assets/subjects.js?body=1" for 127.0.0.1 at 2013-09-17 14:45:15 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 14:45:15 -0400
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-09-17 14:45:15 -0400
+
+
+Started GET "/forums/1/subjects/1/topics/1/discusses/1" for 127.0.0.1 at 2013-09-17 14:45:21 -0400
+
+ActionController::RoutingError (No route matches [GET] "/forums/1/subjects/1/topics/1/discusses/1"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.7ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (48.8ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/forums/1/subjects/1/topics/1/discusses/1" for 127.0.0.1 at 2013-09-17 14:45:56 -0400
+
+ActionController::RoutingError (No route matches [GET] "/forums/1/subjects/1/topics/1/discusses/1"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (5.3ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (46.7ms)
+
+
+Started GET "/forums/1/subjects/1/topics/1/discusses/1" for 127.0.0.1 at 2013-09-17 14:46:49 -0400
+
+SyntaxError (/Users/mikeburkle/Projects/zero/app/controllers/discusses_controller.rb:78: syntax error, unexpected end-of-input, expecting keyword_end):
+  activesupport (4.0.0) lib/active_support/dependencies.rb:423:in `load'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:423:in `block in load_file'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:615:in `new_constants_in'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:422:in `load_file'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:323:in `require_or_load'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:462:in `load_missing_constant'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:183:in `const_missing'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:534:in `get'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:565:in `constantize'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__429218338681486748__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.3ms)
+
+
+Started GET "/forums/1/subjects/1/topics/1/discusses/1" for 127.0.0.1 at 2013-09-17 14:47:38 -0400
+Processing by DiscussesController#show as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1", "topic_id"=>"1", "id"=>"1"}
+Completed 500 Internal Server Error in 5ms
+
+NameError (undefined local variable or method `set_topics' for #<DiscussesController:0x007fd74e859580>):
+  activesupport (4.0.0) lib/active_support/callbacks.rb:407:in `_run__3509706509294994816__process_action__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__429218338681486748__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.5ms)
+
+
+Started GET "/forums/1/subjects/1/topics/1/discusses/1" for 127.0.0.1 at 2013-09-17 14:48:27 -0400
+
+SyntaxError (/Users/mikeburkle/Projects/zero/app/controllers/discusses_controller.rb:78: syntax error, unexpected end-of-input, expecting keyword_end):
+  activesupport (4.0.0) lib/active_support/dependencies.rb:423:in `load'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:423:in `block in load_file'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:615:in `new_constants_in'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:422:in `load_file'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:323:in `require_or_load'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:462:in `load_missing_constant'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:183:in `const_missing'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:534:in `get'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:565:in `constantize'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__429218338681486748__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.3ms)
+
+
+Started GET "/forums/1/subjects/1/topics/1/discusses/1" for 127.0.0.1 at 2013-09-17 14:48:39 -0400
+Processing by DiscussesController#show as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1", "topic_id"=>"1", "id"=>"1"}
+Completed 500 Internal Server Error in 5ms
+
+NameError (undefined local variable or method `set_topics' for #<DiscussesController:0x007fd74a490600>):
+  activesupport (4.0.0) lib/active_support/callbacks.rb:407:in `_run__3509706509294994816__process_action__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__429218338681486748__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (23.8ms)
+
+
+Started GET "/forums/1/subjects/1/topics/1/discusses/1" for 127.0.0.1 at 2013-09-17 14:50:01 -0400
+Processing by DiscussesController#show as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1", "topic_id"=>"1", "id"=>"1"}
+Completed 500 Internal Server Error in 50ms
+
+NameError (undefined local variable or method `set_topics' for #<DiscussesController:0x007fd74ad79708>):
+  activesupport (4.0.0) lib/active_support/callbacks.rb:407:in `_run__3509706509294994816__process_action__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__429218338681486748__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (4.4ms)[0m  [1mINSERT INTO "forums" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Tue, 17 Sep 2013 18:51:53 UTC +00:00], ["description", "The new MMO that's sweeping the nation!"], ["title", "FF XIV"], ["updated_at", Tue, 17 Sep 2013 18:51:53 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "subjects" ("created_at", "description", "forum_id", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Tue, 17 Sep 2013 18:51:53 UTC +00:00], ["description", "Where the makers gather"], ["forum_id", 1], ["title", "Crafting"], ["updated_at", Tue, 17 Sep 2013 18:51:53 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "subjects" ("created_at", "description", "forum_id", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Tue, 17 Sep 2013 18:51:53 UTC +00:00], ["description", "How to gain levels"], ["forum_id", 1], ["title", "Leveling"], ["updated_at", Tue, 17 Sep 2013 18:51:53 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "topics" ("created_at", "description", "subject_id", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Tue, 17 Sep 2013 18:51:53 UTC +00:00], ["description", "This is fun!"], ["subject_id", 1], ["title", "Mining"], ["updated_at", Tue, 17 Sep 2013 18:51:53 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "discusses" ("created_at", "description", "title", "topic_id", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Tue, 17 Sep 2013 18:51:53 UTC +00:00], ["description", "Help me"], ["title", "Why Am I a NooB?"], ["topic_id", 1], ["updated_at", Tue, 17 Sep 2013 18:51:53 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (3.4ms)[0m  [1mINSERT INTO "forums" ("created_at", "description", "title", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Tue, 17 Sep 2013 18:52:07 UTC +00:00], ["description", "The new MMO that's sweeping the nation!"], ["title", "FF XIV"], ["updated_at", Tue, 17 Sep 2013 18:52:07 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "subjects" ("created_at", "description", "forum_id", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Tue, 17 Sep 2013 18:52:07 UTC +00:00], ["description", "Where the makers gather"], ["forum_id", 1], ["title", "Crafting"], ["updated_at", Tue, 17 Sep 2013 18:52:07 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "subjects" ("created_at", "description", "forum_id", "title", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Tue, 17 Sep 2013 18:52:07 UTC +00:00], ["description", "How to gain levels"], ["forum_id", 1], ["title", "Leveling"], ["updated_at", Tue, 17 Sep 2013 18:52:07 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "topics" ("created_at", "description", "subject_id", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Tue, 17 Sep 2013 18:52:07 UTC +00:00], ["description", "This is fun!"], ["subject_id", 1], ["title", "Mining"], ["updated_at", Tue, 17 Sep 2013 18:52:07 UTC +00:00]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "discusses" ("created_at", "description", "title", "topic_id", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["created_at", Tue, 17 Sep 2013 18:52:07 UTC +00:00], ["description", "Help me"], ["title", "Why Am I a NooB?"], ["topic_id", 1], ["updated_at", Tue, 17 Sep 2013 18:52:07 UTC +00:00]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "posts" ("created_at", "description", "discuss_id", "title", "updated_at") VALUES (?, ?, ?, ?, ?)  [["created_at", Tue, 17 Sep 2013 18:52:07 UTC +00:00], ["description", "because you suck"], ["discuss_id", 1], ["title", "Because"], ["updated_at", Tue, 17 Sep 2013 18:52:07 UTC +00:00]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/forums/1/subjects/1/topics/1/discusses/1" for 127.0.0.1 at 2013-09-17 14:52:10 -0400
+Processing by DiscussesController#show as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1", "topic_id"=>"1", "id"=>"1"}
+Completed 500 Internal Server Error in 5ms
+
+NameError (undefined local variable or method `set_topics' for #<DiscussesController:0x007fd74c84a500>):
+  activesupport (4.0.0) lib/active_support/callbacks.rb:407:in `_run__3509706509294994816__process_action__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__429218338681486748__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (26.3ms)
+
+
+Started GET "/forums/1/subjects/1/topics/1/discusses" for 127.0.0.1 at 2013-09-17 14:52:13 -0400
+Processing by DiscussesController#index as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1", "topic_id"=>"1"}
+Completed 500 Internal Server Error in 5ms
+
+NameError (undefined local variable or method `set_topics' for #<DiscussesController:0x007fd74ca7a4b0>):
+  activesupport (4.0.0) lib/active_support/callbacks.rb:407:in `_run__3509706509294994816__process_action__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__429218338681486748__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.3ms)
+
+
+Started GET "/forums/1/subjects/1/topics/1/" for 127.0.0.1 at 2013-09-17 14:52:17 -0400
+Processing by TopicsController#show as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1", "id"=>"1"}
+  [1m[35mSubject Load (0.2ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT "topics".* FROM "topics" WHERE "topics"."subject_id" = ? AND "topics"."id" = ? LIMIT 1[0m  [["subject_id", 1], ["id", "1"]]
+  Rendered topics/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 59ms (Views: 9.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/discusses.css?body=1" for 127.0.0.1 at 2013-09-17 14:52:17 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-09-17 14:52:17 -0400
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2013-09-17 14:52:17 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 14:52:17 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 14:52:17 -0400
+
+
+Started GET "/assets/subjects.css?body=1" for 127.0.0.1 at 2013-09-17 14:52:17 -0400
+
+
+Started GET "/assets/forum_list.css?body=1" for 127.0.0.1 at 2013-09-17 14:52:17 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-17 14:52:17 -0400
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-09-17 14:52:17 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 14:52:17 -0400
+
+
+Started GET "/assets/forums.js?body=1" for 127.0.0.1 at 2013-09-17 14:52:17 -0400
+
+
+Started GET "/assets/forum_list.js?body=1" for 127.0.0.1 at 2013-09-17 14:52:17 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 14:52:17 -0400
+
+
+Started GET "/assets/discusses.js?body=1" for 127.0.0.1 at 2013-09-17 14:52:17 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-09-17 14:52:17 -0400
+
+
+Started GET "/assets/subjects.js?body=1" for 127.0.0.1 at 2013-09-17 14:52:17 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 14:52:17 -0400
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-09-17 14:52:17 -0400
+
+
+Started GET "/forums/1/subjects/1/topics/1/" for 127.0.0.1 at 2013-09-17 14:52:23 -0400
+Processing by TopicsController#show as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1", "id"=>"1"}
+  [1m[35mSubject Load (0.2ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mTopic Load (0.2ms)[0m  [1mSELECT "topics".* FROM "topics" WHERE "topics"."subject_id" = ? AND "topics"."id" = ? LIMIT 1[0m  [["subject_id", 1], ["id", "1"]]
+  Rendered topics/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 13ms (Views: 8.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 14:52:23 -0400
+
+
+Started GET "/assets/subjects.css?body=1" for 127.0.0.1 at 2013-09-17 14:52:23 -0400
+
+
+Started GET "/assets/forum_list.css?body=1" for 127.0.0.1 at 2013-09-17 14:52:23 -0400
+
+
+Started GET "/assets/discusses.css?body=1" for 127.0.0.1 at 2013-09-17 14:52:23 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-17 14:52:23 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 14:52:23 -0400
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2013-09-17 14:52:23 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-09-17 14:52:23 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 14:52:23 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 14:52:23 -0400
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-09-17 14:52:23 -0400
+
+
+Started GET "/assets/forum_list.js?body=1" for 127.0.0.1 at 2013-09-17 14:52:23 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 14:52:23 -0400
+
+
+Started GET "/assets/forums.js?body=1" for 127.0.0.1 at 2013-09-17 14:52:23 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-09-17 14:52:23 -0400
+
+
+Started GET "/assets/subjects.js?body=1" for 127.0.0.1 at 2013-09-17 14:52:23 -0400
+
+
+Started GET "/assets/discusses.js?body=1" for 127.0.0.1 at 2013-09-17 14:52:23 -0400
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-09-17 14:52:23 -0400
+
+
+Started GET "/forums/1/subjects/1/topics/1/discusses/1" for 127.0.0.1 at 2013-09-17 14:52:30 -0400
+Processing by DiscussesController#show as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1", "topic_id"=>"1", "id"=>"1"}
+Completed 500 Internal Server Error in 4ms
+
+NameError (undefined local variable or method `set_topics' for #<DiscussesController:0x007fd74a5d1000>):
+  activesupport (4.0.0) lib/active_support/callbacks.rb:407:in `_run__3509706509294994816__process_action__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `block in instrument'
+  activesupport (4.0.0) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.0.0) lib/active_support/notifications.rb:159:in `instrument'
+  actionpack (4.0.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.0.0) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+  activerecord (4.0.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.0.0) lib/abstract_controller/base.rb:136:in `process'
+  actionpack (4.0.0) lib/abstract_controller/rendering.rb:44:in `process'
+  actionpack (4.0.0) lib/action_controller/metal.rb:195:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.0.0) lib/action_controller/metal.rb:231:in `block in action'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:48:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__429218338681486748__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138:in `service'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:94:in `run'
+  /Users/mikeburkle/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.8ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /Users/mikeburkle/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.5ms)
+
+
+Started GET "/forums/1/subjects/1/topics/1/discusses/1" for 127.0.0.1 at 2013-09-17 14:52:43 -0400
+Processing by DiscussesController#show as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1", "topic_id"=>"1", "id"=>"1"}
+  [1m[35mTopic Load (0.2ms)[0m  SELECT "topics".* FROM "topics" WHERE "topics"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mDiscuss Load (0.2ms)[0m  [1mSELECT "discusses".* FROM "discusses" WHERE "discusses"."topic_id" = ? AND "discusses"."id" = ? LIMIT 1[0m  [["topic_id", 1], ["id", "1"]]
+  Rendered discusses/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 108ms (Views: 10.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 14:52:44 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-09-17 14:52:44 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-17 14:52:44 -0400
+
+
+Started GET "/assets/discusses.css?body=1" for 127.0.0.1 at 2013-09-17 14:52:44 -0400
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2013-09-17 14:52:44 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 14:52:44 -0400
+
+
+Started GET "/assets/discusses.js?body=1" for 127.0.0.1 at 2013-09-17 14:52:44 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 14:52:44 -0400
+
+
+Started GET "/assets/forum_list.js?body=1" for 127.0.0.1 at 2013-09-17 14:52:44 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 14:52:44 -0400
+
+
+Started GET "/assets/forum_list.css?body=1" for 127.0.0.1 at 2013-09-17 14:52:44 -0400
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-09-17 14:52:44 -0400
+
+
+Started GET "/assets/subjects.css?body=1" for 127.0.0.1 at 2013-09-17 14:52:44 -0400
+
+
+Started GET "/assets/forums.js?body=1" for 127.0.0.1 at 2013-09-17 14:52:44 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-09-17 14:52:44 -0400
+
+
+Started GET "/assets/subjects.js?body=1" for 127.0.0.1 at 2013-09-17 14:52:44 -0400
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-09-17 14:52:44 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 14:52:44 -0400
+
+
+Started GET "/forums/1/subjects/1/topics/1/discusses/1/posts/1" for 127.0.0.1 at 2013-09-17 14:52:50 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"forum_id"=>"1", "subject_id"=>"1", "topic_id"=>"1", "discuss_id"=>"1", "id"=>"1"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered posts/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 35ms (Views: 10.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/discusses.css?body=1" for 127.0.0.1 at 2013-09-17 14:52:50 -0400
+
+
+Started GET "/assets/posts.css?body=1" for 127.0.0.1 at 2013-09-17 14:52:50 -0400
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-09-17 14:52:50 -0400
+
+
+Started GET "/assets/forums.css?body=1" for 127.0.0.1 at 2013-09-17 14:52:50 -0400
+
+
+Started GET "/assets/topics.css?body=1" for 127.0.0.1 at 2013-09-17 14:52:50 -0400
+
+
+Started GET "/assets/forum_list.css?body=1" for 127.0.0.1 at 2013-09-17 14:52:50 -0400
+
+
+Started GET "/assets/discusses.js?body=1" for 127.0.0.1 at 2013-09-17 14:52:50 -0400
+
+
+Started GET "/assets/forum_list.js?body=1" for 127.0.0.1 at 2013-09-17 14:52:50 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-09-17 14:52:50 -0400
+
+
+Started GET "/assets/subjects.css?body=1" for 127.0.0.1 at 2013-09-17 14:52:50 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-09-17 14:52:50 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-09-17 14:52:50 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-09-17 14:52:50 -0400
+
+
+Started GET "/assets/subjects.js?body=1" for 127.0.0.1 at 2013-09-17 14:52:50 -0400
+
+
+Started GET "/assets/posts.js?body=1" for 127.0.0.1 at 2013-09-17 14:52:50 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-09-17 14:52:50 -0400
+
+
+Started GET "/assets/topics.js?body=1" for 127.0.0.1 at 2013-09-17 14:52:50 -0400
+
+
+Started GET "/assets/forums.js?body=1" for 127.0.0.1 at 2013-09-17 14:52:50 -0400

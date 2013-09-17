@@ -15,7 +15,7 @@ class SubjectsController < ApplicationController
 
   # GET /subjects/new
   def new
-    @subject = Subject.new(forum_id: @forum)
+    @subjects = Subject.new(forum_id: @forum)
   end
 
   # GET /subjects/1/edit

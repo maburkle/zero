@@ -1,11 +1,21 @@
 Zero::Application.routes.draw do
+  resources :posts
+
+  resources :discusses
+
+  resources :topics
+
   get "forum_list/new"
   get "forum_list/create"
   resources :forums do 
-    resources :subjects
-
+    resources :subjects do
+      resources :topics do
+        resources :discusses do
+          resources :posts
+        end
+      end
+    end
   end
-
 
   root 'forums#index'
 

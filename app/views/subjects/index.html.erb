@@ -1,5 +1,5 @@
 <h1>Listing subjects</h1>
-
+a
 <table>
   <thead>
     <tr>
@@ -15,8 +15,7 @@
   <tbody>
     <% @subjects.each do |subject| %>
       <tr>
-        <td><%= subject.forum_id %></td>
-        <td><%= subject.title %></td>
+        <td><%= link_to "#{subject.title}", 'topics#index' %></td>
         <td><%= subject.description %></td>
       </tr>
     <% end %>
