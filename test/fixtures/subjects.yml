@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+   forum_id: 1
+  title: MyString
+  description: MyString
+
+two:
+   forum_id: 1
+  title: MyString
+  description: MyString

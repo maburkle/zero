@@ -1,0 +1,2 @@
+module ForumListHelper
+end
