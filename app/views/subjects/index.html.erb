@@ -3,7 +3,6 @@ a
 <table>
   <thead>
     <tr>
-      <th>forum</th>
       <th>Title</th>
       <th>Description</th>
       <th></th>
@@ -17,6 +16,8 @@ a
       <tr>
         <td><%= link_to "#{subject.title}", forum_subject_topics_path(subject_id: subject.id) %></td>
         <td><%= subject.description %></td>
+        <td><%= link_to 'Show', forum_subject_path(id: subject.id) %></td>
+        <td><%= link_to 'Edit', edit_forum_subject_path(id: subject.id) %></td>
       </tr>
     <% end %>
   </tbody>
