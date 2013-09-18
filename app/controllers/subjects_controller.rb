@@ -1,5 +1,5 @@
 class SubjectsController < ApplicationController
-  before_action :set_forum
+  before_action :set_forum_from_forum_id
   before_action :set_subject, only: [:show, :edit, :update, :destroy]
 
   # GET /subjects
@@ -15,7 +15,7 @@ class SubjectsController < ApplicationController
 
   # GET /subjects/new
   def new
-    @subjects = Subject.new(forum_id: @forum)
+    @subject = Subject.new(forum_id: @forum)
   end
 
   # GET /subjects/1/edit
@@ -25,11 +25,11 @@ class SubjectsController < ApplicationController
   # POST /subjects
   # POST /subjects.json
   def create
-    @subject = @forum.subjects.new(forum_id: @forum)
+    @subject = @forum.subjects.new(subject_params)
 
     respond_to do |format|
       if @subject.save
-        format.html { redirect_to @subject, notice: 'Subject was successfully created.' }
+        format.html { render action: 'show'}
         format.json { render action: 'show', status: :created, location: @subject }
       else
         format.html { render action: 'new' }
@@ -43,7 +43,7 @@ class SubjectsController < ApplicationController
   def update
     respond_to do |format|
       if @subject.update(subject_params)
-        format.html { redirect_to @subject, notice: 'Subject was successfully updated.' }
+        format.html { redirect_to @subjects, notice: 'Subject was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: 'edit' }
@@ -66,10 +66,6 @@ class SubjectsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_subject
       @subject = @forum.subjects.find(params[:id])
-    end
-
-    def set_forum
-      @forum = Forum.find(params[:forum_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

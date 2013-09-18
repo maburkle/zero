@@ -1,5 +1,7 @@
 class DiscussesController < ApplicationController
-  before_action :set_topic
+  before_action :set_subject_from_subject_id
+  before_action :set_forum_from_forum_id
+  before_action :set_topic_from_topic_id
   before_action :set_discuss, only: [:show, :edit, :update, :destroy]
 
   # GET /discusses
@@ -24,11 +26,11 @@ class DiscussesController < ApplicationController
   # POST /discusses
   # POST /discusses.json
   def create
-    @discuss = @topic.discusses.new(topic_id: @topic)
+    @discuss = @topic.discusses.new(discuss_params)
 
     respond_to do |format|
       if @discuss.save
-        format.html { redirect_to @discuss, notice: 'Discuss was successfully created.' }
+        format.html { render 'show' }
         format.json { render action: 'show', status: :created, location: @discuss }
       else
         format.html { render action: 'new' }
@@ -65,10 +67,6 @@ class DiscussesController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_discuss
       @discuss = @topic.discusses.find(params[:topic_id])
-    end
-
-    def set_topic
-      @topic = Topic.find(params[:topic_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

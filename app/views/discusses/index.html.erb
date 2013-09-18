@@ -15,7 +15,7 @@
   <tbody>
     <% @discusses.each do |discuss| %>
       <tr>
-        <td><%= discuss.topic_id %></td>
+        <td><%= link_to "#{discuss.title}", forum_subject_topic_discuss_posts_path(discuss_id: discuss.id) %></td>
         <td><%= discuss.title %></td>
         <td><%= discuss.description %></td>
         <td><%= link_to 'Show', discuss %></td>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Discuss', new_discuss_path %>
+<%= link_to 'New Discuss', new_forum_subject_topic_discuss_path %>

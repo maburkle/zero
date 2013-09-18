@@ -1,10 +1,14 @@
 class PostsController < ApplicationController
+  before_action :set_subject_from_subject_id
+  before_action :set_forum_from_forum_id
+  before_action :set_topic_from_topic_id
+  before_action :set_discuss_from_discuss_id
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @posts = @discuss.posts
   end
 
   # GET /posts/1
@@ -14,7 +18,7 @@ class PostsController < ApplicationController
 
   # GET /posts/new
   def new
-    @post = Post.new
+    @post = Post.new(discuss_id: @discuss)
   end
 
   # GET /posts/1/edit
@@ -24,11 +28,11 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-    @post = Post.new(post_params)
+    @post = @discuss.posts.new(post_params)
 
     respond_to do |format|
       if @post.save
-        format.html { redirect_to @post, notice: 'Post was successfully created.' }
+        format.html { render 'show' }
         format.json { render action: 'show', status: :created, location: @post }
       else
         format.html { render action: 'new' }
@@ -64,7 +68,7 @@ class PostsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
-      @post = Post.find(params[:id])
+      @post = @discuss.posts.find(params[:discuss_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

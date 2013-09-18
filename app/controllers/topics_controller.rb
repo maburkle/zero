@@ -1,5 +1,6 @@
 class TopicsController < ApplicationController
-  before_action :set_subject
+  before_action :set_subject_from_subject_id
+  before_action :set_forum_from_forum_id
   before_action :set_topic, only: [:show, :edit, :update, :destroy]
 
   # GET /topics
@@ -15,7 +16,7 @@ class TopicsController < ApplicationController
 
   # GET /topics/new
   def new
-    @topics = Topic.new(subject_id: @subject)
+    @topic = Topic.new(subject_id: @subject)
   end
 
   # GET /topics/1/edit
@@ -25,11 +26,11 @@ class TopicsController < ApplicationController
   # POST /topics
   # POST /topics.json
   def create
-    @topic = @subject.topics.new(subject_id: @subject)
+       @topic = @subject.topics.new(topic_params)
 
     respond_to do |format|
       if @topic.save
-        format.html { redirect_to @topic, notice: 'Topic was successfully created.' }
+        format.html { render action: 'show' }
         format.json { render action: 'show', status: :created, location: @topic }
       else
         format.html { render action: 'new' }
@@ -66,10 +67,6 @@ class TopicsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_topic
       @topic = @subject.topics.find(params[:id])
-    end
-
-    def set_subject
-      @subject = Subject.find(params[:subject_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

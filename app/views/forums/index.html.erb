@@ -14,7 +14,7 @@
   <tbody>
     <% @forums.each do |forum| %>
       <tr>
-        <td><%= link_to "#{forum.title}", "forums/#{forum.id}/subjects" %></td>
+        <td><%= link_to "#{forum.title}", forum_subjects_path(forum_id: forum.id) %></td>
         <td><%= forum.description %></td>
         <td><%= link_to 'Show', forum %></td>
         <td><%= link_to 'Edit', edit_forum_path(forum) %></td>
