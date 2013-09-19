@@ -3,7 +3,6 @@
 <table>
   <thead>
     <tr>
-      <th>Topic</th>
       <th>Title</th>
       <th>Description</th>
       <th></th>
@@ -16,10 +15,9 @@
     <% @discusses.each do |discuss| %>
       <tr>
         <td><%= link_to "#{discuss.title}", forum_subject_topic_discuss_posts_path(discuss_id: discuss.id) %></td>
-        <td><%= discuss.title %></td>
         <td><%= discuss.description %></td>
-        <td><%= link_to 'Show', discuss %></td>
-        <td><%= link_to 'Edit', edit_discuss_path(discuss) %></td>
+        <td><%= link_to 'Show', forum_subject_topic_discuss_path(id: discuss.id) %></td>
+        <td><%= link_to 'Edit', edit_forum_subject_topic_discuss_path(id: discuss.id) %></td>
         <td><%= link_to 'Destroy', discuss, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

@@ -18,8 +18,7 @@
         <td><%= post.discuss_id %></td>
         <td><%= post.title %></td>
         <td><%= post.description %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
+        <td><%= link_to 'Edit', edit_forum_subject_topic_discuss_post_path(id: post.id) %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @discuss %> |
-<%= link_to 'Back', discusses_path %>
+<%= link_to 'Show', forum_subject_topic_path(@forum, @subject, @topic, @discuss) %> |
+<%= link_to 'Back', forum_subject_topic_discusses_path %>
