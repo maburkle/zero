@@ -1,10 +1,4 @@
-<h1 id="banner">Banner</h1>
-
-<body class="wrapper">
-<div class="main_title"><%= @forum.title %></div>
-<div class="left_bar">Left</div>
-  <div class="right_bar">Right Bar</div>
-  <div class="middle_content">
+<%= render '/shared/header' %>
     <% @subjects.each do |subject| %>
       <div>
         <td><%= link_to "#{subject.title}", forum_subject_topics_path(subject_id: subject.id) %></td>

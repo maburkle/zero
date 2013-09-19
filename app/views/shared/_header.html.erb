@@ -1,0 +1,20 @@
+<h1 id="banner"><%= link_to "Divide By Zero", root_path %></h1>
+
+<body class="wrapper">
+<div class="main_title">
+   <% if @forum %>
+     <%= link_to @forum.title, forum_subjects_path(forum_id: @forum) %>
+     <% if @subject %>
+      - <%= link_to @subject.title, forum_subject_topics_path(subject_id: @subject) %>
+      <% if @topic %>
+        - <%= link_to @topic.title, forum_subject_topic_discusses_path(topic_id: @topic) %>
+        <% if @discuss %>
+          - <%= @discuss.title %>
+        <% end %>
+      <% end %>
+    <% end %>
+  <% end %>
+</div>
+<div class="left_bar">Left</div>
+  <div class="right_bar">Right Bar</div>
+  <div class="middle_content">

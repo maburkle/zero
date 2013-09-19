@@ -54,3 +54,16 @@
 	text-decoration: none;
 	color: white;
 }
+
+.forum_title {
+
+}
+
+.description_text {
+	font-size: 12px;
+}
+
+.admin_links {
+	text-align: right;
+	font-size: 8px;
+}

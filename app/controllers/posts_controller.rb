@@ -32,7 +32,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       if @post.save
-        format.html { render 'show' }
+        format.html { redirect_to forum_subject_topic_discuss_posts_path(discuss_id: @discuss) }
         format.json { render action: 'show', status: :created, location: @post }
       else
         format.html { render action: 'new' }

@@ -12,16 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :discuss_id %><br>
-    <%= f.number_field :discuss_id %>
-  </div>
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
     <%= f.label :description %><br>
-    <%= f.text_field :description %>
+    <%= f.text_area :description, row: 10 %>
   </div>
   <div class="actions">
     <%= f.submit %>

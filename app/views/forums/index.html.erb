@@ -1,16 +1,10 @@
-<h1 id="banner">Banner</h1>
-
-<body class="wrapper">
-<div class="left_bar">Left</div>
-  <div class="right_bar">Right Bar</div>
-  <div class="middle_content">
+<%= render '/shared/header' %>
     <% @forums.each do |forum| %>
       <div>
-        <td class="forum_title"><%= link_to "#{forum.title}", forum_subjects_path(forum_id: forum.id) %></td>
-        <td><%= forum.description %></td>
-        <td><%= link_to 'Show', forum %></td>
-        <td><%= link_to 'Edit', edit_forum_path(forum) %></td>
-        <td><%= link_to 'Destroy', forum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <div class="forum_title"><%= link_to "#{forum.title}", forum_subjects_path(forum_id: forum.id) %></div>
+        <div class="description_text"><%= forum.description %></div>
+        <div class="admin_links"><%= link_to 'Edit', edit_forum_path(forum) %></div>
+        <div class="admin_links"><%= link_to 'Destroy', forum, method: :delete, data: { confirm: 'Are you sure?' } %></div>
       </div>
       </br>
     <% end %>
