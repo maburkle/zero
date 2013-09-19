@@ -11,3 +11,46 @@
  *= require_self
  *= require_tree .
  */
+ #banner {
+	text-align: center;
+	font-size: 42px;
+} 
+
+.main_title {
+	color: black;
+	text-align: center;
+	font-size: 30px;
+}
+
+.wrapper {
+	display: block;
+	position: relative;
+	height: 100%;
+	background-color: #893BFF;
+	color: white;
+}
+
+.left_bar {
+	float: left;
+    width: 15%;
+	height: 100%;
+}
+
+.right_bar {
+	float: right;
+	width: 15%;
+	height: 100%;
+}
+
+
+.middle_content {
+	float: right;
+	width: 70%;
+	text-align: left;
+}
+
+.middle_content a{
+	font-size: 25px;
+	text-decoration: none;
+	color: white;
+}

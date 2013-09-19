@@ -1,28 +1,19 @@
-<h1>Listing subjects</h1>
-a
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<h1 id="banner">Banner</h1>
 
-  <tbody>
+<body class="wrapper">
+<div class="main_title"><%= @forum.title %></div>
+<div class="left_bar">Left</div>
+  <div class="right_bar">Right Bar</div>
+  <div class="middle_content">
     <% @subjects.each do |subject| %>
-      <tr>
+      <div>
         <td><%= link_to "#{subject.title}", forum_subject_topics_path(subject_id: subject.id) %></td>
         <td><%= subject.description %></td>
         <td><%= link_to 'Show', forum_subject_path(id: subject.id) %></td>
         <td><%= link_to 'Edit', edit_forum_subject_path(id: subject.id) %></td>
-      </tr>
+      </div>
+      </br>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Subject', new_forum_subject_path(params[:forum_id]) %>
+    <%= link_to 'New Subject', new_forum_subject_path(params[:forum_id]) %>
+  </div>
+</body>

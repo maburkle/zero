@@ -1,29 +1,20 @@
-<h1>Listing discusses</h1>
+<h1 id="banner">Banner</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<body class="wrapper">
+<div class="main_title"><%= @forum.title %>-<%=@subject.title%>-<%=@topic.title%></div>
+<div class="left_bar">Left</div>
+  <div class="right_bar">Right Bar</div>
+  <div class="middle_content">
     <% @discusses.each do |discuss| %>
-      <tr>
+      <div>
         <td><%= link_to "#{discuss.title}", forum_subject_topic_discuss_posts_path(discuss_id: discuss.id) %></td>
         <td><%= discuss.description %></td>
         <td><%= link_to 'Show', forum_subject_topic_discuss_path(id: discuss.id) %></td>
         <td><%= link_to 'Edit', edit_forum_subject_topic_discuss_path(id: discuss.id) %></td>
         <td><%= link_to 'Destroy', discuss, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      </div>
+      </br>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Discuss', new_forum_subject_topic_discuss_path %>
+    <%= link_to 'New Discuss', new_forum_subject_topic_discuss_path %>
+  </div>
+</body>

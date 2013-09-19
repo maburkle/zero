@@ -1,28 +1,19 @@
-<h1>Listing topics</h1>
+<h1 id="banner">Banner</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
+<body class="wrapper">
+<div class="main_title"><%= @forum.title %>-<%=@subject.title%></div>
+<div class="left_bar">Left</div>
+  <div class="right_bar">Right Bar</div>
+  <div class="middle_content">
     <% @topics.each do |topic| %>
-      <tr>
+      <div>
         <td><%= link_to "#{topic.title}", forum_subject_topic_discusses_path(topic_id: topic.id) %></td>
         <td><%= topic.description %></td>
         <td><%= link_to 'Show', forum_subject_topic_path(id: topic.id) %></td>
         <td><%= link_to 'Edit', edit_forum_subject_topic_path(id: topic.id) %></td>
-      </tr>
+      </div>
+      </br>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Topic', new_forum_subject_topic_path %>
+    <%= link_to 'New Topic', new_forum_subject_topic_path %>
+  </div>
+</body>
