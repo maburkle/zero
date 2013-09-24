@@ -27,6 +27,7 @@ class DiscussesController < ApplicationController
   # POST /discusses.json
   def create
     @discuss = @topic.discusses.new(discuss_params)
+    @discuss.username = current_user.username
 
     respond_to do |format|
       if @discuss.save

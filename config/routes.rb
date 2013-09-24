@@ -1,12 +1,7 @@
 Zero::Application.routes.draw do
-  resources :posts
+  devise_for :users
+  resources :users
 
-  resources :discusses
-
-  resources :topics
-
-  get "forum_list/new"
-  get "forum_list/create"
   resources :forums do 
     resources :subjects do
       resources :topics do

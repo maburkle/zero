@@ -25,6 +25,7 @@ class ForumsController < ApplicationController
   # POST /forums.json
   def create
     @forum = Forum.new(forum_params)
+    @forum.username = current_user.username
 
     respond_to do |format|
       if @forum.save
@@ -69,6 +70,6 @@ class ForumsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def forum_params
-      params.require(:forum).permit(:title, :description)
+      params.require(:forum).permit(:title, :description, :username)
     end
 end

@@ -26,6 +26,7 @@ class SubjectsController < ApplicationController
   # POST /subjects.json
   def create
     @subject = @forum.subjects.new(subject_params)
+    @subject.username = current_user.username
 
     respond_to do |format|
       if @subject.save

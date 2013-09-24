@@ -3,11 +3,14 @@
       <div>
         <td><%= link_to "#{subject.title}", forum_subject_topics_path(subject_id: subject.id) %></td>
         <td><%= subject.description %></td>
+        <div><%= subject.username %></div>
         <td><%= link_to 'Show', forum_subject_path(id: subject.id) %></td>
         <td><%= link_to 'Edit', edit_forum_subject_path(id: subject.id) %></td>
       </div>
       </br>
     <% end %>
+    <% if current_user %>
     <%= link_to 'New Subject', new_forum_subject_path(params[:forum_id]) %>
+    <% end %>
   </div>
 </body>

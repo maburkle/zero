@@ -1,14 +1,14 @@
 <%= render '/shared/header' %>
     <% @posts.each do |post| %>
       <div>
-        <td><%= post.discuss_id %></td>
-        <td><%= post.title %></td>
-        <td><%= post.description %></td>
+        <div class="post_view"><%= post.description %></div>
+        <div><%= post.username %></div>
         <td><%= link_to 'Edit', edit_forum_subject_topic_discuss_post_path(id: post.id) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </div>
       </br>
     <% end %>
+    <% if current_user %>
     <%= link_to 'New Post', new_forum_subject_topic_discuss_post_path %>
+    <% end %>
   </div>
 </body>

@@ -3,12 +3,14 @@
       <div>
         <td><%= link_to "#{discuss.title}", forum_subject_topic_discuss_posts_path(discuss_id: discuss.id) %></td>
         <td><%= discuss.description %></td>
+        <div><%= discuss.username %></div>
         <td><%= link_to 'Show', forum_subject_topic_discuss_path(id: discuss.id) %></td>
         <td><%= link_to 'Edit', edit_forum_subject_topic_discuss_path(id: discuss.id) %></td>
-        <td><%= link_to 'Destroy', discuss, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </div>
       </br>
     <% end %>
+    <% if current_user %>
     <%= link_to 'New Discuss', new_forum_subject_topic_discuss_path %>
+    <% end %>
   </div>
 </body>
