@@ -3,7 +3,7 @@
       <div>
         <td><%= link_to "#{subject.title}", forum_subject_topics_path(subject_id: subject.id) %></td>
         <td><%= subject.description %></td>
-        <div><%= subject.username %></div>
+        <div><%= subject.username %> - <%= subject.updated_at.strftime("%m/%d/%Y - %H:%M") %></div>
         <td><%= link_to 'Show', forum_subject_path(id: subject.id) %></td>
         <td><%= link_to 'Edit', edit_forum_subject_path(id: subject.id) %></td>
       </div>

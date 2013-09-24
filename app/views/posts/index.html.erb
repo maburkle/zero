@@ -2,8 +2,10 @@
     <% @posts.each do |post| %>
       <div>
         <div class="post_view"><%= post.description %></div>
-        <div><%= post.username %></div>
+        <div><%= post.username %> - <%= post.created_at.strftime("%m/%d/%Y - %H:%M") %></div>
+        <% if current_user %>
         <td><%= link_to 'Edit', edit_forum_subject_topic_discuss_post_path(id: post.id) %></td>
+        <% end %>
       </div>
       </br>
     <% end %>
