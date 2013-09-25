@@ -6,6 +6,7 @@
         <div><%= subject.username %> - <%= subject.updated_at.strftime("%m/%d/%Y - %H:%M") %></div>
         <td><%= link_to 'Show', forum_subject_path(id: subject.id) %></td>
         <td><%= link_to 'Edit', edit_forum_subject_path(id: subject.id) %></td>
+        <div class="admin_links"><%= link_to 'Destroy', forum_subjects_path, method: :delete, data: { confirm: 'Are you sure?' } %></div> 
       </div>
       </br>
     <% end %>

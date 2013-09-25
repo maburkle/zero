@@ -3,7 +3,7 @@
       <div>
         <td><%= link_to "#{discuss.title}", forum_subject_topic_discuss_posts_path(discuss_id: discuss.id) %></td>
         <td><%= discuss.description %></td>
-        <div><%= discuss.username %> - <%= discuss.updated_at.strftime("%m/%d/%Y - %H:%M") %></div>
+        <div><%= discuss.username %> - <%= discuss.updated_at %></div>
         <td><%= link_to 'Show', forum_subject_topic_discuss_path(id: discuss.id) %></td>
         <td><%= link_to 'Edit', edit_forum_subject_topic_discuss_path(id: discuss.id) %></td>
       </div>
@@ -14,3 +14,4 @@
     <% end %>
   </div>
 </body>
+z

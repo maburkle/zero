@@ -72,6 +72,6 @@ class DiscussesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def discuss_params
-      params.require(:discuss).permit(:topic_id, :title, :description)
+      params.require(:discuss).permit(:topic_id, :title, :description, :updated_at, :created_at)
     end
   end

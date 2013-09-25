@@ -1,3 +1,3 @@
 class Post < ActiveRecord::Base
-	belongs_to :discuss
+	belongs_to :discuss, touch: true
 end
