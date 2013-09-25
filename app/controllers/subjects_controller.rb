@@ -58,7 +58,7 @@ class SubjectsController < ApplicationController
   def destroy
     @subject.destroy
     respond_to do |format|
-      format.html { redirect_to subjects_url }
+      format.html { redirect_to :back }
       format.json { head :no_content }
     end
   end
