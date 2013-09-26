@@ -1,16 +1,5 @@
 <h1 id="banner"><%= link_to "Divide By Zero", root_path %></h1>
 
-<% if user_signed_in? %>
-  <li>
-  <%= current_user.username %><br>
-  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
-  </li>
-<% else %>
-  <li>
-  <%= link_to('Login', new_user_session_path)  %>  
-  </li>
-<% end %>
-
 <body class="wrapper">
 <div class="main_title">
    <% if @forum %>
@@ -26,6 +15,19 @@
     <% end %>
   <% end %>
 </div>
-<div class="left_bar">Left</div>
-  <div class="right_bar">Right Bar</div>
-  <div class="middle_content">
+<div class="left_bar">Left
+    <% if user_signed_in? %>
+    <li>
+      <%= current_user.username %>
+      <br>
+      <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
+    </li>
+    <% else %>
+    <li>
+      <%= link_to('Login', new_user_session_path) %>  
+    </li>
+    <% end %>
+</div>
+<div class="right_bar">
+</div>
+<div class="middle_content">

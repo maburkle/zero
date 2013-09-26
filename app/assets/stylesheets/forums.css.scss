@@ -1,11 +1,13 @@
 // Place all the styles related to the forums controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#banner {
+ #banner {
 	text-align: center;
 	font-size: 42px;
-	background-color: #893BFF;
-	color: white;
+	background-color: #E0B0FF;
+	margin-top: 0;
+	margin-bottom: 20px;
+	height: 50px;
 } 
 
 .wrapper {

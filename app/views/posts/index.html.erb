@@ -1,16 +1,22 @@
 <%= render '/shared/header' %>
     <% @posts.each do |post| %>
-      <div>
-        <div class="post_view"><%= post.description %></div>
-        <div><%= post.username %> - <%= post.created_at.strftime("%m/%d/%Y - %H:%M") %></div>
-        <% if current_user %>
-        <div class="admin_links"><%= link_to 'Destroy', forum_subject_topic_discuss_post_path(id: post.id), method: :delete, data: { confirm: 'Are you sure?' } %>
-        <% end %>
+      <div class="post_outline">
+        <div class="forum_user_info">
+          <%= post.username %> 
+          <br>
+          <%= post.created_at.strftime("%m/%d/%Y - %I:%M%P") %>
+        </div>
+        <div class="post_view">
+          <%= post.description %>
+        </div>
+        <div class="admin_links">
+          <%= link_to 'Destroy', forum_subject_topic_discuss_post_path(id: post.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
       </div>
       </br>
-    <% end %>
-    <% if current_user %>
-    <%= link_to 'New Post', new_forum_subject_topic_discuss_post_path %>
+      <% end %>
+      <% if current_user %>
+      <%= link_to 'New Post', new_forum_subject_topic_discuss_post_path %>
     <% end %>
   </div>
 </body>
