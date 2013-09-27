@@ -8,8 +8,10 @@
       - <%= link_to @subject.title, forum_subject_topics_path(subject_id: @subject) %>
       <% if @topic %>
         - <%= link_to @topic.title, forum_subject_topic_discusses_path(topic_id: @topic) %>
-        <% if @discuss %>
-          - <%= @discuss.title %>
+        <div class="discuss_title">
+           <% if @discuss %>
+           <%= @discuss.title %>
+        </div>
         <% end %>
       <% end %>
     <% end %>
