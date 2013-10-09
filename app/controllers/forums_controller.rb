@@ -65,7 +65,7 @@ class ForumsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_forum
-      @forum = Forum.find(params[:id])
+      @forum = Forum.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

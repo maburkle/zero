@@ -1,21 +1,23 @@
 <%= render '/shared/header' %>
     <% @forums.each do |forum| %>
-      <div class="forum_outline">
         <div class="forum_user_info">
           <%= forum.username %>
           <br>
           <%= forum.updated_at.strftime("%m/%d/%Y - %I:%M%P") %>
         </div>
         <div class="forum_title">
-          <%= link_to "#{forum.title}", forum_subjects_path(forum_id: forum.id) %><br>
+          <%= link_to "#{forum.title}", forum_subjects_path(forum_id: forum.slug) %>
+          <br>
           <div class="forum_desc"><%= forum.description %></div>
         </div>
         <div class="admin_links">
+          <% if current_user && current_user.admin %>
           <%= link_to 'Destroy', forum, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
         </div> 
-      </div>
       </br>
     <% end %>
+      <br>
     <% if current_user %>
     <%= link_to 'New Forum', new_forum_path %>
     <% end %>

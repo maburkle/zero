@@ -5,19 +5,19 @@ class ApplicationController < ActionController::Base
   before_filter :configure_permitted_parameters, if: :devise_controller?
 
   def set_forum_from_forum_id
-  	@forum = Forum.find(params[:forum_id])
+  	@forum = Forum.friendly.find(params[:forum_id])
   end
 
   def set_subject_from_subject_id
-  	@subject = Subject.find(params[:subject_id])
+  	@subject = Subject.friendly.find(params[:subject_id])
   end
 
   def set_topic_from_topic_id
-  	@topic = Topic.find(params[:topic_id])
+  	@topic = Topic.friendly.find(params[:topic_id])
   end
 
   def set_discuss_from_discuss_id
-  	@discuss = Discuss.find(params[:discuss_id])
+  	@discuss = Discuss.friendly.find(params[:discuss_id])
   end
 
   protected

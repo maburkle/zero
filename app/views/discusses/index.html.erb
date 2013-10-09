@@ -4,11 +4,10 @@
         <div class="forum_user_info">
           <%= discuss.username %>
           <br>
-          <%= discuss.updated_at.strftime("%m/%d/%Y - %I:%M%P") %>
+          <%= discuss.updated_at.strftime("%m/%d/%Y %I:%M%P") %>
         </div>
         <div class="forum_title">
-          <%= link_to "#{discuss.title}", forum_subject_topic_discuss_posts_path(discuss_id: discuss.id) %>
-          <br>
+          <%= link_to "#{discuss.title}", forum_subject_topic_discuss_posts_path(discuss_id: discuss.slug) %>
         </div>
         <div class="admin_links">
           <%= link_to 'Destroy', forum_subject_topic_discuss_path(id: discuss.id), method: :delete, data: { confirm: 'Are you sure?' } %>

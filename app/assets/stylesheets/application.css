@@ -52,6 +52,8 @@
 	height: 100%;
 	background-color: #E0B0FF;
 	color: white;
+	padding: 0;
+	margin: 0;
 }
 
 .left_bar {
@@ -113,6 +115,7 @@
 	font-size: 8px;
 	width: 20%;
 	height: 100%;
+	min-height: 250px;
 	float: left;
 	text-align: center;
 }

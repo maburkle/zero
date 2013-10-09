@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130923173302) do
+ActiveRecord::Schema.define(version: 20131008144148) do
 
   create_table "discusses", force: true do |t|
     t.integer  "topic_id"
@@ -20,7 +20,10 @@ ActiveRecord::Schema.define(version: 20130923173302) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "username"
+    t.string   "slug"
   end
+
+  add_index "discusses", ["slug"], name: "index_discusses_on_slug"
 
   create_table "forums", force: true do |t|
     t.string   "title"
@@ -28,7 +31,10 @@ ActiveRecord::Schema.define(version: 20130923173302) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "username"
+    t.string   "slug"
   end
+
+  add_index "forums", ["slug"], name: "index_forums_on_slug"
 
   create_table "posts", force: true do |t|
     t.integer  "discuss_id"
@@ -37,7 +43,10 @@ ActiveRecord::Schema.define(version: 20130923173302) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "username"
+    t.string   "slug"
   end
+
+  add_index "posts", ["slug"], name: "index_posts_on_slug"
 
   create_table "subjects", force: true do |t|
     t.integer  "forum_id"
@@ -46,7 +55,10 @@ ActiveRecord::Schema.define(version: 20130923173302) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "username"
+    t.string   "slug"
   end
+
+  add_index "subjects", ["slug"], name: "index_subjects_on_slug"
 
   create_table "topics", force: true do |t|
     t.integer  "subject_id"
@@ -55,7 +67,10 @@ ActiveRecord::Schema.define(version: 20130923173302) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "username"
+    t.string   "slug"
   end
+
+  add_index "topics", ["slug"], name: "index_topics_on_slug"
 
   create_table "users", force: true do |t|
     t.string   "username"

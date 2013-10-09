@@ -30,6 +30,9 @@ gem 'jbuilder', '~> 1.2'
 # Devise security
 gem 'devise'
 
+# Friendly_id
+gem 'friendly_id', '~> 5.0.0.rc3'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false

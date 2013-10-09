@@ -1,4 +1,17 @@
 <%= render '/shared/header' %>
+    <div class="forum_outline">
+      <div class="forum_user_info"> 
+        <%= @discuss.username %>
+        <br>
+        <%= @discuss.created_at.strftime("%m/%d/%Y - %I:%M%P") %>
+      </div>
+      <div class="post_view">
+        <%= @discuss.description %>
+      </div>
+      <div class="admin_links">
+           <%= link_to 'Destroy', forum_subject_topic_discuss_path(id: @discuss.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+      </div>
+      <br/>
     <% @posts.each do |post| %>
       <div class="post_outline">
         <div class="forum_user_info">
