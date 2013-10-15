@@ -3,3 +3,4 @@ class Discuss < ActiveRecord::Base
 	has_many :posts 
 	extend FriendlyId
 	friendly_id :title, use: [:scoped, :slugged], scope: :topic
+end

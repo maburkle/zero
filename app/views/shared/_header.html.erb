@@ -1,7 +1,7 @@
 <h1 id="banner"><%= link_to "Divide By Zero", root_path %></h1>
 
 <body class="wrapper">
-<div class="main_title">
+ <div class="main_title">
    <% if @forum %>
      <%= link_to @forum.title, forum_subjects_path(forum_id: @forum) %>
      <% if @subject %>
@@ -11,8 +11,8 @@
         <div class="discuss_title">
            <% if @discuss %>
            <%= @discuss.title %>
+            <% end %>
         </div>
-        <% end %>
       <% end %>
     <% end %>
   <% end %>
@@ -20,7 +20,7 @@
 <div class="left_bar">
     <% if user_signed_in? %>
     <li>
-      <%= current_user.username %>
+      <%= link_to(current_user.username, user_path(current_user)) %>
       <br>  
       <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
     </li>
@@ -30,6 +30,5 @@
     </li>
     <% end %>
 </div>
-<div class="right_bar">
-</div>
+<div class="right_bar"><script type="text/javascript" src="http://www.typefrag.com/Server-Status/script.aspx?id=e96ae72d-963f-4aca-ab21-7c80e8b0ba47"></script></div>
 <div class="middle_content">

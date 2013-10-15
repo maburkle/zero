@@ -9,6 +9,7 @@ class DiscussesController < ApplicationController
   def index
     @discusses = @topic.discusses
   end
+  
   # GET /discusses/1
   # GET /discusses/1.json
   def show

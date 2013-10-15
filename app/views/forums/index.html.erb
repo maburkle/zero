@@ -5,11 +5,11 @@
           <br>
           <%= forum.updated_at.strftime("%m/%d/%Y - %I:%M%P") %>
         </div>
-        <div class="forum_title">
-          <%= link_to "#{forum.title}", forum_subjects_path(forum_id: forum.slug) %>
-          <br>
-          <div class="forum_desc"><%= forum.description %></div>
-        </div>
+          <div class="forum_title">
+           <%= link_to "#{forum.title}", forum_subjects_path(forum_id: forum.slug) %>
+            <br>
+           <div class="forum_desc"><%= forum.description %></div>
+          </div>
         <div class="admin_links">
           <% if current_user && current_user.admin %>
           <%= link_to 'Destroy', forum, method: :delete, data: { confirm: 'Are you sure?' } %>

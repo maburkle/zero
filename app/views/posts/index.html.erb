@@ -1,31 +1,28 @@
-<%= render '/shared/header' %>
-    <div class="forum_outline">
+   <%= render '/shared/header' %>
       <div class="forum_user_info"> 
-        <%= @discuss.username %>
-        <br>
-        <%= @discuss.created_at.strftime("%m/%d/%Y - %I:%M%P") %>
+        <%= link_to 'Destroy', forum_subject_topic_discuss_path(id: @discuss.id), method: :delete, data: { confirm: 'Are you sure?' } %>
       </div>
       <div class="post_view">
         <%= @discuss.description %>
       </div>
       <div class="admin_links">
-           <%= link_to 'Destroy', forum_subject_topic_discuss_path(id: @discuss.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= @discuss.username %>
+        <br>
+        <%= @discuss.created_at.strftime("%m/%d/%Y - %I:%M%P") %>
       </div>
       <br/>
     <% @posts.each do |post| %>
-      <div class="post_outline">
         <div class="forum_user_info">
-          <%= post.username %> 
-          <br>
-          <%= post.created_at.strftime("%m/%d/%Y - %I:%M%P") %>
+          <%= link_to 'Destroy', forum_subject_topic_discuss_post_path(id: post.id), method: :delete, data: { confirm: 'Are you sure?' } %>
         </div>
         <div class="post_view">
           <%= post.description %>
         </div>
         <div class="admin_links">
-          <%= link_to 'Destroy', forum_subject_topic_discuss_post_path(id: post.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+         <%= post.username %> 
+          <br>
+          <%= post.created_at.strftime("%m/%d/%Y - %I:%M%P") %>
         </div>
-      </div>
       </br>
       <% end %>
       <% if current_user %>

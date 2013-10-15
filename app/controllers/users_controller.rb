@@ -4,12 +4,19 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    if current_user && current_user.admin
+          @users = User.all
+       else
+          redirect_to "/forums"
+    end
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
+    unless current_user == @user || (current_user && current_user.admin)
+      redirect_to "/forums"
+    end
   end
 
   # GET /users/new
@@ -18,7 +25,10 @@ class UsersController < ApplicationController
   end
 
   # GET /users/1/edit
-  def edit
+  def edit  
+    unless current_user == @user || (current_user && current_user.admin)
+      redirect_to "/forums"
+    end
   end
 
   # POST /users
@@ -69,6 +79,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:username, :admin, :first_name, :last_name, :gender, :password, :password_confirmation, :remember_me)
+      params.require(:user).permit(:username, :admin, :email, :first_name, :last_name, :gender, :password, :password_confirmation, :remember_me)
     end
 end

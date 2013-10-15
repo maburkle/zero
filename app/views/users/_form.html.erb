@@ -26,12 +26,14 @@
 
     <%= f.label :gender %><br>
     <%= f.text_field :gender %><br>
-
+<% if current_user && current_user.admin %>
     <%= f.label :admin %><br>
     <%= f.check_box :admin %><br>
+<% end %>
 
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+

@@ -1,6 +1,5 @@
 <%= render '/shared/header' %>
     <% @discusses.each do |discuss| %>
-      <div class="forum_outline">
         <div class="forum_user_info">
           <%= discuss.username %>
           <br>
@@ -10,13 +9,16 @@
           <%= link_to "#{discuss.title}", forum_subject_topic_discuss_posts_path(discuss_id: discuss.slug) %>
         </div>
         <div class="admin_links">
+        <% if current_user && current_user.admin %>
           <%= link_to 'Destroy', forum_subject_topic_discuss_path(id: discuss.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
         </div>
-      </div>
       </br>
     <% end %>
+    <br>
     <% if current_user %>
     <%= link_to 'New Discuss', new_forum_subject_topic_discuss_path %>
     <% end %>
   </div>
 </body>
+</html>
