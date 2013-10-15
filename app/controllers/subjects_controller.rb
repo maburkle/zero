@@ -1,5 +1,6 @@
 class SubjectsController < ApplicationController
   before_action :set_forum_from_forum_id
+  before_action :set_newest
   before_action :set_subject, only: [:show, :edit, :update, :destroy]
 
   # GET /subjects
@@ -38,6 +39,11 @@ class SubjectsController < ApplicationController
       end
     end
   end
+
+  def set_newest
+        @newest = Discuss.friendly.find(:all, order: "updated_at", limit: 5).reverse
+  end
+
 
   # PATCH/PUT /subjects/1
   # PATCH/PUT /subjects/1.json

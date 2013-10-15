@@ -69,8 +69,8 @@ html, body {
 
 .right_bar {
 	float: right;
-	width: 19%;
-	height: 600px;
+    max-width: 23%;
+	height: 400px;
 }
 
 

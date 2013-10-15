@@ -1,4 +1,4 @@
-<%= render '/shared/header' %>
+ <%= render partial: 'shared/header', locals: {newest: @newest} %>
     <% @discusses.each do |discuss| %>
         <div class="forum_user_info">
           <%= discuss.username %>

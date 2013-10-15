@@ -13,5 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
+//= require jquery.sticky
 //= require_tree .
-//= include jquery.sticky.js

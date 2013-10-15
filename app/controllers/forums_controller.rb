@@ -1,4 +1,5 @@
 class ForumsController < ApplicationController
+  before_action :set_newest
   before_action :set_forum, only: [:show, :edit, :update, :destroy]
 
   # GET /forums
@@ -50,6 +51,10 @@ class ForumsController < ApplicationController
         format.json { render json: @forum.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  def set_newest
+        @newest = Discuss.friendly.find(:all, order: "updated_at", limit: 5).reverse
   end
 
   # DELETE /forums/1
