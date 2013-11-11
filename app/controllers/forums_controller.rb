@@ -1,5 +1,6 @@
 class ForumsController < ApplicationController
   before_action :set_newest
+  before_action :set_user_from_current_user
   before_action :set_forum, only: [:show, :edit, :update, :destroy]
 
   # GET /forums
@@ -26,7 +27,8 @@ class ForumsController < ApplicationController
   # POST /forums.json
   def create
     @forum = Forum.new(forum_params)
-    @forum.username = current_user.username
+    @forum.user = @user
+
 
     respond_to do |format|
       if @forum.save
@@ -54,7 +56,7 @@ class ForumsController < ApplicationController
   end
 
   def set_newest
-        @newest = Discuss.friendly.find(:all, order: "updated_at", limit: 5).reverse
+        @newest = Discuss.friendly.find(:all, order: "updated_at", limit: 4).reverse
   end
 
   # DELETE /forums/1

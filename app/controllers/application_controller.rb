@@ -20,6 +20,10 @@ class ApplicationController < ActionController::Base
   	@discuss = Discuss.friendly.find(params[:discuss_id])
   end
 
+  def set_user_from_current_user
+    @user = current_user
+  end
+
   protected
 
    def configure_permitted_parameters

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131008144148) do
+ActiveRecord::Schema.define(version: 20131110181850) do
 
   create_table "discusses", force: true do |t|
     t.integer  "topic_id"
@@ -21,9 +21,25 @@ ActiveRecord::Schema.define(version: 20131008144148) do
     t.datetime "updated_at"
     t.string   "username"
     t.string   "slug"
+    t.string   "user_id"
   end
 
   add_index "discusses", ["slug"], name: "index_discusses_on_slug"
+
+  create_table "events", force: true do |t|
+    t.string   "title"
+    t.string   "description"
+    t.string   "start_time"
+    t.string   "end_time"
+    t.string   "event_date"
+    t.string   "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "slug"
+    t.string   "event_type"
+  end
+
+  add_index "events", ["slug"], name: "index_events_on_slug"
 
   create_table "forums", force: true do |t|
     t.string   "title"
@@ -32,6 +48,7 @@ ActiveRecord::Schema.define(version: 20131008144148) do
     t.datetime "updated_at"
     t.string   "username"
     t.string   "slug"
+    t.string   "user_id"
   end
 
   add_index "forums", ["slug"], name: "index_forums_on_slug"
@@ -44,9 +61,19 @@ ActiveRecord::Schema.define(version: 20131008144148) do
     t.datetime "updated_at"
     t.string   "username"
     t.string   "slug"
+    t.string   "user_id"
   end
 
   add_index "posts", ["slug"], name: "index_posts_on_slug"
+
+  create_table "rsvps", force: true do |t|
+    t.string   "event_id"
+    t.string   "user_id"
+    t.string   "main_job"
+    t.string   "second_job"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "subjects", force: true do |t|
     t.integer  "forum_id"
@@ -56,6 +83,7 @@ ActiveRecord::Schema.define(version: 20131008144148) do
     t.datetime "updated_at"
     t.string   "username"
     t.string   "slug"
+    t.string   "user_id"
   end
 
   add_index "subjects", ["slug"], name: "index_subjects_on_slug"
@@ -68,6 +96,7 @@ ActiveRecord::Schema.define(version: 20131008144148) do
     t.datetime "updated_at"
     t.string   "username"
     t.string   "slug"
+    t.string   "user_id"
   end
 
   add_index "topics", ["slug"], name: "index_topics_on_slug"

@@ -12,6 +12,18 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require twitter/bootstrap
-//= require jquery.sticky
+//= require jquery.timepicker
+//= require js/transition
+//= require js/alert
+//= require js/modal
+//= require js/dropdown
+//= require jquery.ui.datepicker
+//= require js/scrollspy
+//= require js/tab
+//= require js/tooltip
+//= require js/popover
+//= require js/button
+//= require js/collapse
+//= require js/carousel
+//= require js/affix
 //= require_tree .

@@ -1,6 +1,7 @@
 class TopicsController < ApplicationController
   before_action :set_subject_from_subject_id
   before_action :set_forum_from_forum_id
+  before_action :set_user_from_current_user
   before_action :set_newest
   before_action :set_topic, only: [:show, :edit, :update, :destroy]
 

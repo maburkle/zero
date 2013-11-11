@@ -1,4 +1,6 @@
 Zero::Application.routes.draw do
+  resources :events
+
   devise_for :users
   resources :users
 
@@ -11,8 +13,12 @@ Zero::Application.routes.draw do
       end
     end
   end
-
-  root 'forums#index'
+  
+  resources :event_calendar
+  resources :events
+  resources :home
+  
+  root 'home#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -1,26 +1,27 @@
- <%= render partial: 'shared/header', locals: {newest: @newest} %>
-    <% @subjects.each do |subject| %>
-        <div class="forum_user_info">
-          <%= subject.username %>
-          <br>
-          <%= subject.updated_at.strftime("%m/%d/%Y - %I:%M%P") %>
-        </div>
-        <div class="forum_title">
-          <%= link_to "#{subject.title}", forum_subject_topics_path(subject_id: subject.slug) %>
-          <br> 
-          <div class="forum_desc"><%= subject.description %></div>
-        </div>
-        <div class="admin_links">
-          <% if current_user && current_user.admin %>
-          <%= link_to 'Destroy', forum_subject_path(id: subject.id), method: :delete, data: { confirm: 'Are you sure?' } %>
-          <% end %>
-        </div> 
+<div class="forum_wrapper">
+  <% @subjects.each do |subject| %>
+    <div class="row forum_row">
+      <div class="col-xs-2 col-sm-2 col-md-2 forum_user">
+        <%= link_to "#{forum.user.username}", @user %>
+      </div>
+      <div class="col-xs-8 col-sm-8 col-md-8 forum_area">
+        <%= link_to "#{subject.title}", forum_subject_topics_path(subject_id: subject.slug) %>
+        <br>
+        <div><%= subject.description %></div>
+      </div> 
+      <div class="col-xs-0 col-sm-2 col-md-2 forum_user">
+        <%= time_ago_in_words(subject.updated_at) %>
+        <% if current_user && current_user.admin %>
+        <br>
+        <%= link_to 'Destroy', forum_subject_path(id: subject.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
+      </div>
       </br>
-    <% end %>
-      <br>
-    <% if current_user %>
-    <%= link_to 'New Subject', new_forum_subject_path(params[:forum_id]) %>
-    <% end %>
+    </div>
+  <% end %>
+  <br>
+  <% if current_user %>
+    <%= link_to 'New Subject', new_forum_subject_path(params[:forum_id]) %>  
+  <% end %> 
   </div>
-</body>
-</html>
+</div>

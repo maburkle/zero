@@ -1,25 +1,28 @@
- <%= render partial: 'shared/header', locals: {newest: @newest} %>
+  <div class="forum_wrapper">
     <% @forums.each do |forum| %>
-        <div class="forum_user_info">
-          <%= forum.username %>
-          <br>
-          <%= forum.updated_at.strftime("%m/%d/%Y - %I:%M%P") %>
+      <div class="row forum_row">
+        <div class="col-xs-2 col-sm-2 col-md-2 forum_user">
+          <%= link_to "#{forum.user.username}", @user %>
         </div>
-          <div class="forum_title">
-           <%= link_to "#{forum.title}", forum_subjects_path(forum_id: forum.slug) %>
-            <br>
-           <div class="forum_desc"><%= forum.description %></div>
-          </div>
-        <div class="admin_links">
-          <% if current_user && current_user.admin %>
-          <%= link_to 'Destroy', forum, method: :delete, data: { confirm: 'Are you sure?' } %>
-          <% end %>
+        <div class="col-xs-8 col-sm-8 col-md-8 forum_area">
+          <%= link_to "#{forum.title}", forum_subjects_path(forum_id: forum.slug) %>
+          <br>
+          <div><%= forum.description %></div>
         </div> 
-      </br>
+        <div class="col-xs-0 col-sm-2 col-md-2 forum_time">
+          <%= time_ago_in_words(forum.updated_at) %>
+          <% if current_user && current_user.admin %>
+            <br>
+            <%= link_to 'Destroy', forum, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
+        </div>
+        </br>
+      </div>
     <% end %>
       <br>
     <% if current_user %>
-    <%= link_to 'New Forum', new_forum_path %>
+      <a href="<%= new_forum_path %>" class="btn btn-default col-xs-offset-5">New Forum</a>
     <% end %>
   </div>
-</body>
+</div>
+

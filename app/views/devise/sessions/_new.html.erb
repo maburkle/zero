@@ -1,0 +1,5 @@
+<%= form_for(resource, :as => resource_name, :url => session_path(resource_name), :html => {class: 'form-inline'}) do |f| %>
+ <%= f.text_field :username, :autofocus => true, placeholder: "Username" %>
+ <%= f.password_field :password, placeholder: "Password" %>	
+ <%= f.submit "Sign in", class: "btn btn-sm sign_in" %>
+<% end %>
