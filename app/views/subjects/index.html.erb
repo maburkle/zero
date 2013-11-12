@@ -1,27 +1,27 @@
-<div class="forum_wrapper">
+<div class="forum_wrapper col-xs-offset-0 col-sm-offset-1 col-xs-12 col-sm-10">
   <% @subjects.each do |subject| %>
     <div class="row forum_row">
-      <div class="col-xs-2 col-sm-2 col-md-2 forum_user">
-        <%= link_to "#{forum.user.username}", @user %>
+      <div class="col-xs-2 forum_user">
+        <%= link_to "#{subject.user.username}", @user %>
       </div>
-      <div class="col-xs-8 col-sm-8 col-md-8 forum_area">
+      <div class="col-xs-8 forum_area">
         <%= link_to "#{subject.title}", forum_subject_topics_path(subject_id: subject.slug) %>
         <br>
         <div><%= subject.description %></div>
       </div> 
-      <div class="col-xs-0 col-sm-2 col-md-2 forum_user">
-        <%= time_ago_in_words(subject.updated_at) %>
+      <div class="col-xs-2 forum_time">
+        <%= time_ago_in_words(subject.updated_at) %> ago
         <% if current_user && current_user.admin %>
-        <br>
-        <%= link_to 'Destroy', forum_subject_path(id: subject.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+          <br>
+          <%= link_to 'Destroy', forum_subject_path(id: subject.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to 'Edit', edit_forum_subject_path(id: subject.id) %>
         <% end %>
       </div>
       </br>
     </div>
   <% end %>
   <br>
-  <% if current_user %>
-    <%= link_to 'New Subject', new_forum_subject_path(params[:forum_id]) %>  
-  <% end %> 
   </div>
-</div>
+<% if current_user %>
+   <a href="<%= new_forum_subject_path %>" class="btn btn-default col-sm-offset-10">New Subject</a>
+<% end %>

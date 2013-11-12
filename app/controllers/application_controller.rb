@@ -24,6 +24,14 @@ class ApplicationController < ActionController::Base
     @user = current_user
   end
 
+  def after_sign_in_path_for(resource)
+    request.referrer 
+  end
+
+  def after_sign_out_path_for(resource_or_scope)
+    request.referrer  
+  end
+  
   protected
 
    def configure_permitted_parameters

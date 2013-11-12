@@ -1,0 +1,17 @@
+<% @newest_discusses.each do |discuss| %>
+  <div class="col-xs-offset-0 col-sm-offset-7 col-xs-12 col-sm-4 latest_user_posts">
+    <%= link_to discuss.topic.subject.forum.title, forum_path(id: discuss.topic.subject.forum) %> - 
+    <%= link_to discuss.topic.subject.title, forum_subject_path(forum_id: discuss.topic.subject.forum, id: discuss.topic.subject) %> - 
+    <%= link_to discuss.topic.title, forum_subject_topic_path(forum_id: discuss.topic.subject.forum, subject_id: discuss.topic.subject, id: discuss.topic) %> 
+    <br>
+    <%= link_to discuss.title, forum_subject_topic_discuss_posts_path(forum_id: discuss.topic.subject.forum, subject_id: discuss.topic.subject, topic_id: discuss.topic, discuss_id: discuss) %>
+  </div>
+  <div class="newest_post_wrapper post_wrapper col-xs-offset-0 col-sm-offset-7 col-xs-12 col-sm-4">
+    <div class="col-xs-4 user_post_time">
+     <%= time_ago_in_words(discuss.updated_at) %> ago
+    </div>
+    <div class="col-xs-8 user_post_area">
+  	 <%= discuss.description %>
+    </div>
+  </div> 
+<% end %>

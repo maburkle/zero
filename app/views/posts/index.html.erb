@@ -1,31 +1,42 @@
-      <div class="forum_user_info"> 
-        <%= link_to 'Destroy', forum_subject_topic_discuss_path(id: @discuss.id), method: :delete, data: { confirm: 'Are you sure?' } %>
-      </div>
-      <div class="post_view">
-        <%= @discuss.description %>
-      </div>
-      <div class="admin_links">
-        <%= @discuss.username %>
-        <br>
-        <%= @discuss.created_at.strftime("%m/%d/%Y - %I:%M%P") %>
-      </div>
-      <br/>
-    <% @posts.each do |post| %>
-        <div class="forum_user_info">
-          <%= link_to 'Destroy', forum_subject_topic_discuss_post_path(id: post.id), method: :delete, data: { confirm: 'Are you sure?' } %>
-        </div>
-        <div class="post_view">
-          <%= post.description %>
-        </div>
-        <div class="admin_links">
-         <%= post.username %> 
-          <br>
-          <%= post.created_at.strftime("%m/%d/%Y - %I:%M%P") %>
-        </div>
-      </br>
-      <% end %>
-      <% if current_user %>
-      <%= link_to 'New Post', new_forum_subject_topic_discuss_post_path %>
-    <% end %>
+<h2 class="new_form"> <%= @discuss.title %> </h2>
+
+<div class="forum_wrapper post_wrapper col-xs-offset-0 col-sm-offset-3 col-xs-12 col-sm-6">
+  <div class="row post_row">
+    <div class="col-xs-2 forum_user">
+      <%= link_to "#{@discuss.user.username}", @discuss.user %>
+    </div>
+    <div class="col-xs-7 forum_area">
+      <%= @discuss.description %>
+    </div>
+    <div class="col-xs-3 forum_time">
+      <%= time_ago_in_words(@discuss.updated_at) %> ago
+      <br>
+      <%= link_to 'Destroy', forum_subject_topic_discuss_path(id: @discuss.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+      <%= link_to 'Edit', edit_forum_subject_topic_discuss_path(id: @discuss.id) %>
+    </div>
   </div>
-</body>
+</div>
+<% @posts.each do |post| %>
+<div class="forum_wrapper post_wrapper col-xs-offset-0 col-sm-offset-3 col-xs-12 col-sm-6">  
+  <div class="row post_row">
+    <div class="col-xs-2 forum_user">
+      <%= link_to "#{post.user.username}", @user %>
+    </div>
+    <div class="col-xs-7 forum_area">
+      <%= post.description %>
+    </div> 
+    <div class="col-xs-3 forum_time">
+      <%= time_ago_in_words(post.updated_at) %> ago
+      <% if current_user && current_user.admin %>
+        <%= link_to 'Destroy', forum_subject_topic_discuss_post_path(id: post.id), method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to 'Edit', edit_forum_subject_topic_discuss_post_path(id: post.id) %>
+      <% end %>
+    </div>
+    <br>
+  </div>
+</div>
+<% end %>
+  <br>
+<% if current_user %>
+   <%= render 'new' %>
+<% end %>

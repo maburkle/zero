@@ -9,7 +9,7 @@ class DiscussesController < ApplicationController
   # GET /discusses
   # GET /discusses.json
   def index
-    @discusses = @topic.discusses
+    @discusses = @topic.discusses.order('title ASC')
   end
   
   # GET /discusses/1
@@ -30,7 +30,7 @@ class DiscussesController < ApplicationController
   # POST /discusses.json
   def create
     @discuss = @topic.discusses.new(discuss_params)
-    @discuss.username = current_user.username
+    @discuss.user = @user
 
     respond_to do |format|
       if @discuss.save
@@ -79,6 +79,6 @@ class DiscussesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def discuss_params
-      params.require(:discuss).permit(:topic_id, :title, :description, :updated_at, :created_at)
+      params.require(:discuss).permit(:topic_id, :title, :description, :updated_at, :created_at, :username)
     end
   end

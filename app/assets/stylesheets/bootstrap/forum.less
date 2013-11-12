@@ -32,7 +32,11 @@
 }
 
 .forum_time {
-  text-align: right;
+  text-align: right;    
+    a {
+      color: #4B0082;
+      text-decoration: none;
+    }
 }
 
 .forum_wrapper {
@@ -42,4 +46,53 @@
   border-bottom-left-radius:10px;
   border-top-right-radius:10px;
   border-top-left-radius:10px;
+}
+
+.post_wrapper {
+  margin-bottom: 10px;  
+}
+
+.newest_post_wrapper {
+  background-color: #CCCCCC;
+  box-shadow: 5px 5px 5px black;
+  border-bottom-right-radius:10px;
+  border-bottom-left-radius:10px;
+}
+
+
+.post_row {
+  padding: 0;
+  font-family: 'Oldenburg', cursive;
+    a:hover {
+      text-decoration: underline;
+    }
+}
+
+.latest_user_posts {
+  padding: 0; 
+  text-align: center;
+  color: white;
+  background-color: #664d75; 
+  border-top-right-radius:10px;
+  border-top-left-radius:10px;
+    a {
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+      text-shadow: black 0.1em 0.1em 0.2em;
+      font-family: 'Oldenburg', cursive;
+    }
+      a:hover {
+      color: #CCCCCC;
+      text-decoration: none;
+      background-color: #664d75;
+    }
+}
+
+.user_post_time {
+  text-align: left;
+}
+
+.new_post {
+  min-height: 150px;
 }

@@ -1,3 +1,10 @@
+<% if @event.event_type == "Raid" %>
+	<%= render 'raid' %>
+<% else %>
+	<%= render 'other' %>
+<% end %>
+
+
 
 
 <%= link_to 'Edit', edit_event_path(@event) %> |

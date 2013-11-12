@@ -11,7 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131110181850) do
+ActiveRecord::Schema.define(version: 20131111164710) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "discusses", force: true do |t|
     t.integer  "topic_id"
@@ -24,7 +27,11 @@ ActiveRecord::Schema.define(version: 20131110181850) do
     t.string   "user_id"
   end
 
-  add_index "discusses", ["slug"], name: "index_discusses_on_slug"
+  add_index "discusses", ["slug"], name: "index_discusses_on_slug", using: :btree
+
+  create_table "event_type", force: true do |t|
+    t.string "type"
+  end
 
   create_table "events", force: true do |t|
     t.string   "title"
@@ -39,7 +46,7 @@ ActiveRecord::Schema.define(version: 20131110181850) do
     t.string   "event_type"
   end
 
-  add_index "events", ["slug"], name: "index_events_on_slug"
+  add_index "events", ["slug"], name: "index_events_on_slug", using: :btree
 
   create_table "forums", force: true do |t|
     t.string   "title"
@@ -51,7 +58,7 @@ ActiveRecord::Schema.define(version: 20131110181850) do
     t.string   "user_id"
   end
 
-  add_index "forums", ["slug"], name: "index_forums_on_slug"
+  add_index "forums", ["slug"], name: "index_forums_on_slug", using: :btree
 
   create_table "posts", force: true do |t|
     t.integer  "discuss_id"
@@ -64,7 +71,7 @@ ActiveRecord::Schema.define(version: 20131110181850) do
     t.string   "user_id"
   end
 
-  add_index "posts", ["slug"], name: "index_posts_on_slug"
+  add_index "posts", ["slug"], name: "index_posts_on_slug", using: :btree
 
   create_table "rsvps", force: true do |t|
     t.string   "event_id"
@@ -86,7 +93,7 @@ ActiveRecord::Schema.define(version: 20131110181850) do
     t.string   "user_id"
   end
 
-  add_index "subjects", ["slug"], name: "index_subjects_on_slug"
+  add_index "subjects", ["slug"], name: "index_subjects_on_slug", using: :btree
 
   create_table "topics", force: true do |t|
     t.integer  "subject_id"
@@ -99,7 +106,7 @@ ActiveRecord::Schema.define(version: 20131110181850) do
     t.string   "user_id"
   end
 
-  add_index "topics", ["slug"], name: "index_topics_on_slug"
+  add_index "topics", ["slug"], name: "index_topics_on_slug", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "username"
@@ -121,7 +128,7 @@ ActiveRecord::Schema.define(version: 20131110181850) do
     t.boolean  "admin"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end

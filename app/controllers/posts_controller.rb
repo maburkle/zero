@@ -10,7 +10,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = @discuss.posts
+    @posts = @discuss.posts.order('created_at ASC')
   end
 
   # GET /posts/1
@@ -31,7 +31,7 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = @discuss.posts.new(post_params)
-    @post.username = current_user.username
+    @post.user = @user
 
     respond_to do |format|
       if @post.save
@@ -69,7 +69,7 @@ class PostsController < ApplicationController
   end
 
   def set_newest
-        @newest = Discuss.friendly.find(:all, order: "updated_at", limit: 5).reverse
+    @newest = Discuss.friendly.find(:all, order: "updated_at", limit: 5).reverse
   end
 
   private
@@ -80,6 +80,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:discuss_id, :title, :description, :created_at, :updated_at)
+      params.require(:post).permit(:discuss_id, :title, :description, :created_at, :updated_at, :username)
     end
 end

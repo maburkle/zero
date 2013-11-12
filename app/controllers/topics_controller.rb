@@ -8,7 +8,7 @@ class TopicsController < ApplicationController
   # GET /topics
   # GET /topics.json
   def index
-    @topics = @subject.topics
+    @topics = @subject.topics.order('title ASC')
   end
 
   # GET /topics/1
@@ -29,7 +29,7 @@ class TopicsController < ApplicationController
   # POST /topics.json
   def create
        @topic = @subject.topics.new(topic_params)
-       @topic.username = current_user.username
+       @topic.user = @user
 
     respond_to do |format|
       if @topic.save
@@ -79,6 +79,6 @@ class TopicsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def topic_params
-      params.require(:topic).permit(:subject_id, :title, :description)
+      params.require(:topic).permit(:subject_id, :title, :description, :username)
     end
 end

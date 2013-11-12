@@ -7,7 +7,7 @@ class SubjectsController < ApplicationController
   # GET /subjects
   # GET /subjects.json
   def index
-    @subjects = @forum.subjects
+    @subjects = @forum.subjects.order('title ASC')
   end
 
   # GET /subjects/1
@@ -28,7 +28,8 @@ class SubjectsController < ApplicationController
   # POST /subjects.json
   def create
     @subject = @forum.subjects.new(subject_params)
-    @subject.username = current_user.username
+    @subject.user = @user
+
 
     respond_to do |format|
       if @subject.save
@@ -78,6 +79,6 @@ class SubjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def subject_params
-      params.require(:subject).permit(:forum_id, :title, :description)
+      params.require(:subject).permit(:forum_id, :title, :description, :username)
     end
 end

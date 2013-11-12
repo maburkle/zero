@@ -1,23 +1,25 @@
-    <% @discusses.each do |discuss| %>
-        <div>
-          <%= discuss.username %>
-          <br>
-          <%= discuss.updated_at.strftime("%m/%d/%Y %I:%M%P") %>
-        </div>
-        <div>
-          <%= link_to "#{discuss.title}", forum_subject_topic_discuss_posts_path(discuss_id: discuss.slug) %>
-        </div>
-        <div>
+<div class="forum_wrapper col-xs-offset-0 col-sm-offset-1 col-xs-12 col-sm-10">
+  <% @discusses.each do |discuss| %>
+    <div class="row forum_row">
+      <div class="col-xs-2 forum_user">
+        <%= link_to "#{discuss.user.username}", @user %>
+      </div>
+      <div class="col-xs-8 forum_area">
+        <%= link_to "#{discuss.title}", forum_subject_topic_discuss_posts_path(discuss_id: discuss.slug) %>
+      </div> 
+      <div class="col-xs-2 forum_time">
+        <%= time_ago_in_words(discuss.updated_at) %> ago
         <% if current_user && current_user.admin %>
+          <br>
           <%= link_to 'Destroy', forum_subject_topic_discuss_path(id: discuss.id), method: :delete, data: { confirm: 'Are you sure?' } %>
-          <% end %>
-        </div>
+          <%= link_to 'Edit', edit_forum_subject_topic_discuss_path(id: discuss.id) %>
+        <% end %>
+      </div>
       </br>
-    <% end %>
-    <br>
-    <% if current_user %>
-    <%= link_to 'New Discuss', new_forum_subject_topic_discuss_path %>
-    <% end %>
+    </div>
+  <% end %>
+  <br>
   </div>
-</body>
-</html>
+<% if current_user %>
+   <a href="<%= new_forum_subject_topic_discuss_path %>" class="btn btn-default col-sm-offset-10">New Post</a>
+<% end %>

@@ -6,7 +6,7 @@ class ForumsController < ApplicationController
   # GET /forums
   # GET /forums.json
   def index
-    @forums = Forum.all
+    @forums = Forum.all.order('title ASC')
   end
 
   # GET /forums/1

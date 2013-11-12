@@ -17,6 +17,7 @@ class UsersController < ApplicationController
     unless current_user == @user || (current_user && current_user.admin)
       redirect_to "/forums"
     end
+    @newest_posts = @user.posts.order("created_at DESC").limit(5)
   end
 
   # GET /users/new
