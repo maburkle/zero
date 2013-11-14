@@ -1,3 +1,4 @@
+<%= unless @newest_discusses == [] %>
 <% @newest_discusses.each do |discuss| %>
   <div class="col-xs-offset-0 col-sm-offset-7 col-xs-12 col-sm-4 latest_user_posts">
     <%= link_to discuss.topic.subject.forum.title, forum_path(id: discuss.topic.subject.forum) %> - 
@@ -14,4 +15,6 @@
   	 <%= discuss.description %>
     </div>
   </div> 
+  <% else %>
+  <% end %>
 <% end %>
