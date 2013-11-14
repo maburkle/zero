@@ -1,6 +1,8 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_jobs
+  before_action :set_rsvps
+  before_action :user_rsvp
   # GET /events
   # GET /events.json
   def index
@@ -69,8 +71,26 @@ class EventsController < ApplicationController
       @event = Event.friendly.find(params[:id])
     end
 
+    def user_rsvp
+      current_user.rsvps.each do |rsvp|
+        if rsvp.event = @event
+          return true
+        else
+          return false
+        end
+      end
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
       params.require(:event).permit( :start_time, :end_time, :title, :slug, :event_date, :event_type, :description, :user_id)
+    end
+
+    def set_jobs
+      @jobs = Job.all
+    end
+
+    def set_rsvps
+      @rsvps = Rsvp.where(event_id: @event)
     end
 end

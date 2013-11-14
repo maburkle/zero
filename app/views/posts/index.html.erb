@@ -9,7 +9,7 @@
       <%= @discuss.description %>
     </div>
     <div class="col-xs-3 forum_time">
-      <%= time_ago_in_words(@discuss.updated_at) %> ago
+      <%= time_ago_in_words(@discuss.created_at) %> ago
       <br>
       <%= link_to 'Destroy', forum_subject_topic_discuss_path(id: @discuss.id), method: :delete, data: { confirm: 'Are you sure?' } %>
       <%= link_to 'Edit', edit_forum_subject_topic_discuss_path(id: @discuss.id) %>

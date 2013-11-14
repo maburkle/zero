@@ -5,18 +5,15 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     if current_user && current_user.admin
-          @users = User.all
-       else
-          redirect_to "/forums"
+      @users = User.all
+    else
+      redirect_to "/forums"
     end
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
-    unless current_user == @user || (current_user && current_user.admin)
-      redirect_to "/forums"
-    end
     @newest_posts = @user.posts.order("created_at DESC").limit(5)
   end
 

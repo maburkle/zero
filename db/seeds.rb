@@ -7,4 +7,12 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-  
+  Job.create([job_title: "Bard"])
+  Job.create([job_title: "Paladin"])
+  Job.create([job_title: "Dragoon"])
+  Job.create([job_title: "Monk"])
+  Job.create([job_title: "Warrior"])
+  Job.create([job_title: "Black Mage"])
+  Job.create([job_title: "White Mage"])
+  Job.create([job_title: "Summoner"])
+  Job.create([job_title: "Scholar"])

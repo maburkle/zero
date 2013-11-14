@@ -7,7 +7,8 @@
       <div class="col-xs-8 forum_area">
         <%= link_to "#{topic.title}", forum_subject_topic_discusses_path(topic_id: topic.slug) %>
         <br>
-        <div><%= topic.description %>
+        <div>
+          <%= topic.description %>
         </div>
       </div> 
       <div class="col-xs-2 forum_time">
@@ -24,5 +25,5 @@
   <br>
 </div>
 <% if current_user %>
-   <a href="<%= new_forum_subject_topic_path %>" class="btn btn-default col-sm-offset-10">New Topic</a>
+  <a href="<%= new_forum_subject_topic_path %>" class="btn btn-default col-sm-offset-10">New Topic</a>
 <% end %>

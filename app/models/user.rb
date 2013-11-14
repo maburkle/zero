@@ -4,6 +4,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable
 
+  extend FriendlyId
+  friendly_id :username
+  
   has_many :forums
   has_many :subjects
   has_many :topics
@@ -12,7 +15,4 @@ class User < ActiveRecord::Base
   has_many :events
   has_many :rsvps
   has_many :events, through: :rsvps 
-
-  extend FriendlyId
-  friendly_id :username
 end

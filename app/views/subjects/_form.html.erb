@@ -1,17 +1,18 @@
 <%= form_for [@forum, @subject] do |f| %>
-<div class="col-xs-offset-0 col-sm-offset-2 col-xs-12 col-sm-8 form_body">
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+  <div class="col-xs-offset-0 col-sm-offset-2 col-xs-12 col-sm-8 form_body">
+    <div class="field">
+      <%= f.label :title %>
+      <br>
+      <%= f.text_field :title %>
+    </div>
+    <div class="field">
+      <%= f.label :description %>
+      <br>
+      <%= f.text_area :description, size: "35x5" %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description, size: "35x5" %>
+  <div class="actions form_submit col-xs-offset-0 col-sm-offset-2 col-xs-12 col-sm-8">
+    <br>
+    <%= f.submit %>
   </div>
-  </div>
-</div>
-<div class="actions form_submit col-xs-offset-0 col-sm-offset-2 col-xs-12 col-sm-8">
-  <br>
-  <%= f.submit %>
-</div>
 <% end %>

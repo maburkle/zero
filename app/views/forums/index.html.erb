@@ -7,7 +7,9 @@
       <div class="col-xs-8 forum_area">
         <%= link_to "#{forum.title}", forum_subjects_path(forum_id: forum.slug) %>
         <br>
-        <div><%= forum.description %></div>
+        <div>
+          <%= forum.description %>
+        </div>
       </div> 
       <div class="col-xs-2 forum_time">
         <%= time_ago_in_words(forum.updated_at) %> ago
@@ -19,11 +21,11 @@
       </br>
     </div>
   <% end %>
-    <br>
+  <br>
 </div>
 <br>
 <% if current_user %>
-   <a href="<%= new_forum_path %>" class="btn btn-default col-sm-offset-10">New Forum</a>
+  <a href="<%= new_forum_path %>" class="btn btn-default col-sm-offset-10">New Forum</a>
 <% end %>
 
 

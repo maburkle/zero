@@ -1,12 +1,12 @@
 <%= form_for [@forum, @subject, @topic, @discuss, Post.new] do |f| %>
-<div class="forum_wrapper post_wrapper new_post col-xs-offset-0 col-sm-offset-3 col-xs-12 col-sm-6"> 
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description, size: "20x5" %>
-  </div>
-  </div>
-</div>
-<div class="actions form_submit col-xs-offset-0 col-sm-offset-5 col-xs-12 col-sm-7">
-  <%= f.submit %>
-</div>
+	<div class="forum_wrapper post_wrapper new_post col-xs-offset-0 col-sm-offset-3 col-xs-12 col-sm-6"> 
+		<div class="field">
+			<%= f.label :description %>
+			<br>
+			<%= f.text_area :description, size: "20x5" %>
+		</div>
+	</div>
+	<div class="actions form_submit col-xs-offset-0 col-sm-offset-8 col-xs-12 col-sm-2">
+		<%= f.submit %>
+	</div>
 <% end %>

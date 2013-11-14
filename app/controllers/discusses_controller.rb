@@ -3,7 +3,6 @@ class DiscussesController < ApplicationController
   before_action :set_forum_from_forum_id
   before_action :set_topic_from_topic_id
   before_action :set_user_from_current_user
-  before_action :set_newest
   before_action :set_discuss, only: [:show, :edit, :update, :destroy]
 
   # GET /discusses
@@ -65,10 +64,6 @@ class DiscussesController < ApplicationController
       format.html { redirect_to :back }
       format.json { head :no_content }
     end
-  end
-
-  def set_newest
-        @newest = Discuss.friendly.find(:all, order: "updated_at", limit: 5).reverse
   end
 
   private

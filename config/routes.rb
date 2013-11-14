@@ -15,7 +15,9 @@ Zero::Application.routes.draw do
   end
   
   resources :event_calendar
-  resources :events
+  resources :events do
+    resources :rsvps
+  end
   resources :home
   
   root 'home#index'

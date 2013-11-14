@@ -1,5 +1,4 @@
 class ForumsController < ApplicationController
-  before_action :set_newest
   before_action :set_user_from_current_user
   before_action :set_forum, only: [:show, :edit, :update, :destroy]
 
@@ -53,10 +52,6 @@ class ForumsController < ApplicationController
         format.json { render json: @forum.errors, status: :unprocessable_entity }
       end
     end
-  end
-
-  def set_newest
-        @newest = Discuss.friendly.find(:all, order: "updated_at", limit: 4).reverse
   end
 
   # DELETE /forums/1
