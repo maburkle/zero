@@ -24,7 +24,7 @@
   <br>
 </div>
 <br>
-<% if current_user %>
+<% if current_user && current_user.admin? %>
   <a href="<%= new_forum_path %>" class="btn btn-default col-sm-offset-10">New Forum</a>
 <% end %>
 

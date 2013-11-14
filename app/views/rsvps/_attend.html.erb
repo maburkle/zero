@@ -1,7 +1,7 @@
 <%= form_for [@event, Rsvp.new], :html => {class: 'form-inline'} do |f| %>
-		  <% options = options_from_collection_for_select(@jobs, 'job_title', 'job_title') %>
+		  <% options = options_from_collection_for_select(@jobs.order("job_title"), 'job_title', 'job_title') %>
 			<%= f.select :main_job,  options, :prompt => "Main Job" %>
-			<% options = options_from_collection_for_select(@jobs, 'job_title', 'job_title') %>
+			<% options = options_from_collection_for_select(@jobs.order("job_title"), 'job_title', 'job_title') %>
 			<%= f.select :second_job,  options, :prompt => "Secondary Job" %>
 	<div class="actions form_submit col-xs-offset-0 col-sm-offset-3 col-xs-6 col-sm-6">
 		<%= f.submit "Attend" %>

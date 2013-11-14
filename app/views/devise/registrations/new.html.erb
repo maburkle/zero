@@ -1,18 +1,16 @@
-<h2>Sign up</h2>
-
+<h1 class="new_form">Sign Up</h1>
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
+	<div class="col-xs-offset-0 col-sm-offset-4 col-xs-12 col-sm-4 form_body">
+  	<div><%= f.label :username %><br />
+  	<%= f.text_field :username, :autofocus => true %></div>
 
-  <div><%= f.label :username %><br />
-  <%= f.text_field :username, :autofocus => true %></div>
+  	<div><%= f.label :password %><br />
+  	<%= f.password_field :password %></div>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
-
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
-
-  <div><%= f.submit "Sign up" %></div>
+  	<div><%= f.label :password_confirmation %><br />
+  	<%= f.password_field :password_confirmation %></div>
+  <div class="actions form_submit col-xs-offset-0 col-sm-offset-2 col-xs-12 col-sm-8">
+  <br>
+  	<div><%= f.submit "Sign up" %></div>
 <% end %>
-
-<%= render "devise/shared/links" %>
