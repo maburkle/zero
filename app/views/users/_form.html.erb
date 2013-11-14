@@ -13,36 +13,40 @@
       </ul>
     </div>
   <% end %>
-  <div class="field">
-    <%= f.label :username %>
-    <br>
-    <%= f.text_field :username %>
-    <br>
-    <%= f.label :email %>
-    <br>
-    <%= f.text_field :email %>
-    <br>
-    <%= f.label :first_name %>
-    <br>
-    <%= f.text_field :first_name %>
-    <br>
-    <%= f.label :last_name %>
-    <br>
-    <%= f.text_field :last_name %>
-    <br>
-    <%= f.label :gender %>
-    <br>
-    <%= f.text_field :gender %>
-    <br>
-    <% if current_user && current_user.admin %>
-      <%= f.label :admin %>
+  <div class="col-xs-offset-0 col-sm-offset-4 col-xs-12 col-sm-4 form_body">
+    <div class="field">
+      <%= f.label :username %>
       <br>
-      <%= f.check_box :admin %>
+      <%= f.text_field :username %>
       <br>
-    <% end %>
+      <%= f.label :email %>
+      <br>
+      <%= f.text_field :email %>
+      <br>
+      <%= f.label :first_name %>
+      <br>
+      <%= f.text_field :first_name %>
+      <br>
+      <%= f.label :last_name %>
+      <br>
+      <%= f.text_field :last_name %>
+      <br>
+      <%= f.label :gender %>
+      <br>
+      <%= f.text_field :gender %>
+      <br>
+      <% if current_user && current_user.admin %>
+        <%= f.label :admin %>
+        <br>
+        <%= f.check_box :admin %>
+        <br>
+      <% end %>
+    </div>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="actions form_submit col-xs-offset-0 col-sm-offset-2 col-xs-12 col-sm-8">
+    <div class="actions">
+      <%= f.submit %>
+    </div>
   </div>
 <% end %>
 
