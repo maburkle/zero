@@ -33,5 +33,5 @@
 		<%= render 'rsvps/attend_raid' %>
 	<% else %>
 		<%= link_to "Unattend", event_rsvp_path(@event, @event.rsvps.where(user: current_user).first), class: "btn btn-default btn_unattend", method: :delete %>
-		<% end %>
+	<% end %>
 </div>

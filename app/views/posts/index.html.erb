@@ -3,7 +3,7 @@
 <div class="forum_wrapper post_wrapper col-xs-offset-0 col-sm-offset-3 col-xs-12 col-sm-6">
   <div class="row post_row">
     <div class="col-xs-2 forum_user">
-      <%= link_to "#{@discuss.user.username}", @discuss.user %>
+      <%= link_to @discuss.user.username, @discuss.user %>
     </div>
     <div class="col-xs-7 forum_area">
       <%= @discuss.description %>
@@ -20,7 +20,7 @@
 <div class="forum_wrapper post_wrapper col-xs-offset-0 col-sm-offset-3 col-xs-12 col-sm-6">  
   <div class="row post_row">
     <div class="col-xs-2 forum_user">
-      <%= link_to "#{post.user.username}", @user %>
+      <%= link_to post.user.username, user_path(post.user) %>
     </div>
     <div class="col-xs-7 forum_area">
       <%= post.description %>

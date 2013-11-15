@@ -2,7 +2,7 @@
   <% @forums.each do |forum| %>
     <div class="row forum_row">
       <div class="col-xs-2 forum_user">
-        <%= link_to "#{forum.user.username}", @user %>
+        <%= link_to forum.user.username, user_path(forum.user) %>
       </div>
       <div class="col-xs-8 forum_area">
         <%= link_to "#{forum.title}", forum_subjects_path(forum_id: forum.slug) %>

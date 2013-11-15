@@ -2,10 +2,10 @@
   <% @discusses.each do |discuss| %>
     <div class="row forum_row">
       <div class="col-xs-2 forum_user">
-        <%= link_to "#{discuss.user.username}", @user %>
+        <%= link_to discuss.user.username, user_path(discuss.user) %>
       </div>
       <div class="col-xs-8 forum_area">
-        <%= link_to "#{discuss.title}", forum_subject_topic_discuss_posts_path(discuss_id: discuss.slug) %>
+        <%= link_to discuss.title, forum_subject_topic_discuss_posts_path(discuss_id: discuss.slug) %>
       </div> 
       <div class="col-xs-2 forum_time">
         <%= time_ago_in_words(discuss.updated_at) %> ago

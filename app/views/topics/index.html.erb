@@ -2,10 +2,10 @@
   <% @topics.each do |topic| %>
     <div class="row forum_row">
       <div class="col-xs-2 forum_user">
-        <%= link_to "#{topic.user.username}", @user %>
+        <%= link_to topic.user.username, user_path(topic.user) %>
       </div>
       <div class="col-xs-8 forum_area">
-        <%= link_to "#{topic.title}", forum_subject_topic_discusses_path(topic_id: topic.slug) %>
+        <%= link_to topic.title, forum_subject_topic_discusses_path(topic_id: topic.slug) %>
         <br>
         <div>
           <%= topic.description %>
