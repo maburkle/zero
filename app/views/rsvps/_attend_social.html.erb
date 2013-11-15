@@ -1,0 +1,7 @@
+<%= form_for [@event, Rsvp.new], :html => {class: 'form-inline'} do |f| %>
+		  <%= f.hidden_field :main_job %>
+		  <%= f.hidden_field :second_job %>
+	<div class="actions form_submit col-xs-12">
+		<%= f.submit "Attend" %>
+	</div>
+<% end %>
